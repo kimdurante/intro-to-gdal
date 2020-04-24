@@ -10,6 +10,8 @@ Commonly referred to as **GDAL**
 
 ## Exploring Vector Data
 
-`ogrinfo` - list information about a vector data source
+List information about a vector data source using ogrinfo
+
+`ogrinfo SF/ZipCodes.shp`
 
 
