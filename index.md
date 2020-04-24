@@ -1,4 +1,2 @@
-GDAL - Geospatial Data Abstraction Library
-
-GDAL/OGR - a translator library for raster and vector geospatial data formats
+Geospatial Data Abstraction Library (GDAL/OGR) provides command-line utilities to translate and process a wide range of raster and vector geospatial data formats
 
