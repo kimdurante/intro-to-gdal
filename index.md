@@ -10,4 +10,6 @@ Commonly referred to as **GDAL**
 
 ## Exploring Vector Data
 
+`ogrinfo` - list information about a vector data source
+
 
