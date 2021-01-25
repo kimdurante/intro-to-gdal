@@ -29,14 +29,6 @@ url: "https://kimdurante.github.io" # the base hostname & protocol for your site
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
-# Build settings
-remote_theme: pmarsceill/just-the-docs
-# theme: "just-the-docs"
-color_scheme: light
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-
 footer_content: <a href="https://github.com/kimdurante/intro-to-gdal" target="_blank">View this workshop in GitHub</a>
 
 # Exclude from processing.
