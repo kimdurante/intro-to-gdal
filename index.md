@@ -14,10 +14,16 @@ nav_order: 1
 
 ### Download GDAL
 
+* MacOS: http://www.kyngchaos.com/software/frameworks/#gdal_complete
+
+* Windows: https://www.gisinternals.com/release.php
+
 ### Download Data
+
+Get the data
 
 ## Exploring Vector Data
 
-List information about a vector data source using ogrinfo
+* List information about a vector data source using ogrinfo
 
 `ogrinfo SF/ZipCodes.shp`
