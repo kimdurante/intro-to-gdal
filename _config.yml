@@ -51,4 +51,4 @@ footer_content: <a href="https://github.com/kimdurante/intro-to-gdal" target="_b
 #   - vendor/gems/
 #   - vendor/ruby/
 
-theme: jekyll-theme-time-machine
+theme: jekyll-theme-slate
