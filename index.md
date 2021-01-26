@@ -13,7 +13,7 @@ Geospatial Data Abstraction Library (GDAL) provides command-line utilities to tr
 
 There are several options for downloading GDAL packages. 
 
-### Mac
+### Installing on a Mac
 
 Download the appropriate framework for your MacOS:
 
@@ -25,14 +25,11 @@ Once installed, open a terminal window and run the folowing command:
 
 Or, save it to your profile:
 
-```echo 'export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH' >> ~/.bash_profile
-source ~/.bash_profile```
-
-Test the installation by running the command
+Test the installation:
 
 ```gdalinfo --version```
 
-On Windows:
+### Installing on Windows:
 
 Make sure Python is already installed. Download the appropriate binary for your version of Python:
 
