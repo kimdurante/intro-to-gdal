@@ -12,11 +12,17 @@ nav_order: 1
 
 ## Getting Started
 
-### Download GDAL
+### Install GDAL
 
-* MacOS: http://www.kyngchaos.com/software/frameworks/#gdal_complete
+On a Mac:
 
-* Windows: https://www.gisinternals.com/release.php
+[http://www.kyngchaos.com/software/frameworks/#gdal_complete](http://www.kyngchaos.com/software/frameworks/)
+
+On Windows:
+
+Make sure Python is already installed. Download the appropriate binary for your version of Python:
+
+[https://www.gisinternals.com/release.php](https://www.gisinternals.com/release.php)
 
 ### Download Data
 
