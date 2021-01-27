@@ -18,15 +18,26 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Introduction to GDAL/OGR
+title: Geospatial Data Management
 # email: your-email@example.com
-# description: >- Description
-baseurl: "/intro-to-gdal" # the subpath of your site, e.g. /blog
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "/geospatial-data-management" # the subpath of your site, e.g. /blog
 url: "https://kimdurante.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
-footer_content: <a href="https://github.com/kimdurante/intro-to-gdal" target="_blank">View this workshop in GitHub</a>
+# Build settings
+remote_theme: pmarsceill/just-the-docs
+# theme: "just-the-docs"
+color_scheme: light
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+footer_content: <a href="https://github.com/kimdurante/geospatial-data-management" target="_blank">View this workshop in GitHub</a>
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -47,5 +58,3 @@ footer_content: <a href="https://github.com/kimdurante/intro-to-gdal" target="_b
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
-theme: jekyll-theme-slate
