@@ -8,11 +8,11 @@ nav_order: 2
 
 Exploring raster and vector data properties
 
-## Inspecting Raster Data 
+## Raster Data 
 
 Use ```gdalinfo``` to list information about a raster dataset. This will output properties about the data including file format, projection, extent, metadata, and raster band information:
 
-#### GEOTIFF
+### GeoTIFFs
 ```
 $ gdalinfo geotiffs/SF1987.tif
 ```
@@ -99,7 +99,7 @@ Use the ```-stats``` flag to compute image statistics:
 $ gdalinfo -stats geotiffs/SF1987.tif
 ```
 
-#### Digital Elevation Models
+### Digital Elevation Models (DEM)
 
 ```
 gdalinfo dem/gt30w140n40_dem/gt30w140n40.dem
@@ -150,7 +150,7 @@ Band 1 Block=4800x1 Type=Int16, ColorInterp=Undefined
 
 Use ```ogrinfo``` to list information about vector data:
 
-#### Shapefiles
+### Shapefiles
 ```
 $ ogrinfo shapefiles/ZipCodes.shp
 ```
@@ -200,7 +200,7 @@ state: String (254.0)
 zip: String (254.0)
 ```
 
-#### GeoJSON
+### GeoJSON
 
 ```
 $ ogrinfo -so geojson/sfbayhighways.geojson sfbayhighways
@@ -250,7 +250,7 @@ label: String (0.0)
 bbox: RealList (0.0)
 ```
 
-#### Geodatabases
+### Geodatabases
 
 ```
 $ ogrinfo geodatabases/SanFranciscoESI.gdb -so birds_polygon
