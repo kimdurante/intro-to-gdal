@@ -8,9 +8,9 @@ nav_order: 2
 
 Exploring raster and vector data properties
 
-## Raster Data 
+## Inspecting Raster Data 
 
-Use ```gdalinfo``` to list information about a raster dataset. This will output properties about the data including file format, coordinates, projection, and raster band information:
+Use ```gdalinfo``` to list information about a raster dataset. This will output properties about the data including file format, projection, extent, metadata, and raster band information:
 
 ```
 $ gdalinfo geotiffs/SF1987.tif
@@ -28,14 +28,65 @@ PROJCRS["NAD83 / UTM zone 10N",
         DATUM["North American Datum 1983",
             ELLIPSOID["GRS 1980",6378137,298.257222101,
                 LENGTHUNIT["metre",1]]],
+        PRIMEM["Greenwich",0,
+            ANGLEUNIT["degree",0.0174532925199433]],
+        ID["EPSG",4269]],
+    CONVERSION["UTM zone 10N",
+        METHOD["Transverse Mercator",
+            ID["EPSG",9807]],
+        PARAMETER["Latitude of natural origin",0,
+            ANGLEUNIT["degree",0.0174532925199433],
+            ID["EPSG",8801]],
+        PARAMETER["Longitude of natural origin",-123,
+            ANGLEUNIT["degree",0.0174532925199433],
+            ID["EPSG",8802]],
+        PARAMETER["Scale factor at natural origin",0.9996,
+            SCALEUNIT["unity",1],
+            ID["EPSG",8805]],
+        PARAMETER["False easting",500000,
+            LENGTHUNIT["metre",1],
+            ID["EPSG",8806]],
+        PARAMETER["False northing",0,
+            LENGTHUNIT["metre",1],
+            ID["EPSG",8807]]],
+                
 ...
 
+Metadata:
+  AGENCY=WESTERN MAPPING CENTER (WMC) oversight agency*
+  AREA_OR_POINT=Area
+  DATA_FILE_SIZE=142026024 data set size in bytes*
+  EAST_LONGITUDE=-122 22 30.000 signed deg min sec SDDD MM SS.SSS*
+  IMAGE_SOURCE=COLOR INFRA-RED FILM b&w, cir, natural color, other*
+  METADATA_DATE=1998 4 7 date created or changed, yyyy mm dd*
+  NATION=US nation code*
+  NE_QUAD_CORNER_XY=555013.021 4185195.796 XY coords. of pri. NE quad corner*
+  NORTH_LATITUDE=37 48 45.000 signed deg min sec SDDD MM SS.SSS*
+  NW_QUAD_CORNER_XY=549511.672 4185160.843 XY coords. of pri. NW quad corner*
+  PRODUCER=WESTERN MAPPING CENTER (WMC)
+  PRODUCTION_DATE=1998 1 29 yyyy mm dd*
+  PRODUCTION_SYSTEM=DV2.6.3 10/9OV2.4 5/95 production system*
+  QUADRANGLE_NAME=SAN FRANCISCO NORTH 3.45 or 7.5-min. name*
+  QUADRANT=SE quadrant indicator if cell size = 3.75-minutes*
+  RASTER_ORDER=LEFT_RIGHT/TOP_BOTTOM video display order*
+  RMSE_XY=3.40 doq horiz. accuracy*
+
+...
+
+Image Structure Metadata:
+  INTERLEAVE=BAND
+Corner Coordinates:
+Upper Left  (  549115.000, 4185497.000) (122d26'31.14"W, 37d48'55.98"N)
+Lower Left  (  549115.000, 4177916.000) (122d26'32.99"W, 37d44'50.01"N)
+Upper Right (  555359.000, 4185497.000) (122d22'15.77"W, 37d48'54.70"N)
+Lower Right (  555359.000, 4177916.000) (122d22'17.85"W, 37d44'48.73"N)
+Center      (  552237.000, 4181706.500) (122d24'24.44"W, 37d46'52.37"N)
 Band 1 Block=6244x1 Type=Byte, ColorInterp=Red
 Band 2 Block=6244x1 Type=Byte, ColorInterp=Green
 Band 3 Block=6244x1 Type=Byte, ColorInterp=Blue
 ```
 
-Use flags ```-norat``` and ```-nomd``` to supress output of metadata and raster attributes
+Some datasets may contain a lot of metadata strings. Use flags ```-norat``` and ```-nomd``` to supress output of metadata and raster attributes
 
 ```
 $ gdalinfo -norat -nomd geotiffs/SF1869.tif
