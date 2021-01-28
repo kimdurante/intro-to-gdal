@@ -151,3 +151,9 @@ po_name: String (254.0)
 state: String (254.0)
 zip: String (254.0)
 ```
+
+geoJSON
+
+```
+ogrinfo -so SF/sfbayhighways.geojson sfbayhighways
+```
