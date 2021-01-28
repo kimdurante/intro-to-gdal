@@ -10,10 +10,10 @@ nav_order: 2
 
 Use gdalinfo to list information about raster data:
 
-```gdalinfo SF/SF1987.tif```
+```gdalinfo geotiffs/SF1987.tif```
 
 ## Vector Data
 
-Use gdalinfo to list information about vector data:
+Use ogrinfo to list information about vector data:
 
-```ogrinfo SF/ZipCodes.shp```
+```ogrinfo shapefiles/ZipCodes.shp```
