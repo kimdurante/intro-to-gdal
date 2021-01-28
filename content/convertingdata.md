@@ -29,4 +29,4 @@ See a list of available formats:
 
 See a list of available formats:
 
-```$ ogr2ogr --formats``
+```$ ogr2ogr --formats```
