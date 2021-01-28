@@ -6,19 +6,17 @@ nav_order: 2
 
 ## Inspecting Data
 
+Exploring raster and vector datasets
+
 ## Raster Data
 
-Use gdalinfo to list information about raster data:
-
-Input
-{: .label .label-green }
+Use _gdalinfo_ to list information about a raster dataset:
 
 ```
 $ gdalinfo geotiffs/SF1987.tif
 ```
 
-Output
-{: .label .label-yellow }
+_gdalinfo_ will output various properties about the data including file format. projection, and band information
 
 ```
 Driver: GTiff/GeoTIFF
@@ -37,19 +35,15 @@ Band 2 Block=6244x1 Type=Byte, ColorInterp=Green
 Band 3 Block=6244x1 Type=Byte, ColorInterp=Blue
 ```
 
-Input
-{: .label .label-green }
+Use flags _-norat_ and _-nomd_ to supress output of metadata andraster attributes
 
 ```
 $ gdalinfo -norat -nomd geotiffs/SF1869.tif
 ```
 
-Output
-{: .label .label-yellow }
-
 
 ## Vector Data
 
-Use ogrinfo to list information about vector data:
+Use _ogrinfo_ to list information about vector data:
 
 ```ogrinfo shapefiles/ZipCodes.shp```
