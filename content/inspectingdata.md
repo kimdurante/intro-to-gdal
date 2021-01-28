@@ -155,7 +155,7 @@ zip: String (254.0)
 geoJSON
 
 ```
-ogrinfo -so geojson/sfbayhighways.geojson sfbayhighways
+$ ogrinfo -so geojson/sfbayhighways.geojson sfbayhighways
 ```
 
 Output:
@@ -202,3 +202,47 @@ label: String (0.0)
 bbox: RealList (0.0)
 ```
 
+Geodatabases
+
+```
+$ ogrinfo geodatabases/SanFranciscoESI.gdb -so birds_polygon
+```
+
+Output:
+
+```
+INFO: Open of `geodatabases/SanFranciscoESI.gdb'
+      using driver `OpenFileGDB' successful.
+
+Layer name: birds_polygon
+Geometry: Multi Polygon
+Feature Count: 987
+Extent: (-122.591975, 37.381318) - (-121.780042, 38.246878)
+Layer SRS WKT:
+GEOGCRS["NAD83",
+    DATUM["North American Datum 1983",
+        ELLIPSOID["GRS 1980",6378137,298.257222101,
+            LENGTHUNIT["metre",1]]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["geodetic latitude (Lat)",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["geodetic longitude (Lon)",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    USAGE[
+        SCOPE["Geodesy."],
+        AREA["North America - onshore and offshore: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon. Puerto Rico. United States (USA) - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Hawaii; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands.  British Virgin Islands."],
+        BBOX[14.92,167.65,86.46,-47.74]],
+    ID["EPSG",4269]]
+Data axis to CRS axis mapping: 2,1
+FID Column = OBJECTID
+Geometry Column = Shape
+ID: Real (0.0)
+RARNUM: Integer (0.0)
+Shape_Length: Real (0.0)
+Shape_Area: Real (0.0)
+
+```
