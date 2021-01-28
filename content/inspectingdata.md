@@ -12,6 +12,7 @@ Exploring raster and vector data properties
 
 Use ```gdalinfo``` to list information about a raster dataset. This will output properties about the data including file format, projection, extent, metadata, and raster band information:
 
+#### GEOTIFF
 ```
 $ gdalinfo geotiffs/SF1987.tif
 ```
@@ -98,11 +99,58 @@ Use the ```-stats``` flag to compute image statistics:
 $ gdalinfo -stats geotiffs/SF1987.tif
 ```
 
+#### Digital Elevation Models
+
+```
+gdalinfo dem/gt30w140n40_dem/gt30w140n40.dem
+```
+
+Output:
+
+```
+Driver: EHdr/ESRI .hdr Labelled
+Files: gt30w140n40_dem/gt30w140n40.dem
+       gt30w140n40_dem/gt30w140n40.dem.aux.xml
+       gt30w140n40_dem/gt30w140n40.hdr
+       gt30w140n40_dem/gt30w140n40.stx
+       gt30w140n40_dem/gt30w140n40.prj
+Size is 4800, 6000
+Coordinate System is:
+GEOGCRS["WGS 84",
+    DATUM["World Geodetic System 1984",
+        ELLIPSOID["WGS 84",6378137,298.257223563,
+            LENGTHUNIT["metre",1]]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["geodetic latitude (Lat)",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["geodetic longitude (Lon)",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    ID["EPSG",4326]]
+Data axis to CRS axis mapping: 2,1
+Origin = (-140.000000000000000,39.999999999999993)
+Pixel Size = (0.008333333333330,-0.008333333333330)
+Corner Coordinates:
+Upper Left  (-140.0000000,  40.0000000) (140d 0' 0.00"W, 40d 0' 0.00"N)
+Lower Left  (-140.0000000, -10.0000000) (140d 0' 0.00"W, 10d 0' 0.00"S)
+Upper Right (-100.0000000,  40.0000000) (100d 0' 0.00"W, 40d 0' 0.00"N)
+Lower Right (-100.0000000, -10.0000000) (100d 0' 0.00"W, 10d 0' 0.00"S)
+Center      (-120.0000000,  15.0000000) (120d 0' 0.00"W, 15d 0' 0.00"N)
+Band 1 Block=4800x1 Type=Int16, ColorInterp=Undefined
+  Min=-66.000 Max=4280.000 
+  Minimum=-66.000, Maximum=4280.000, Mean=1329.977, StdDev=744.157
+  NoData Value=-9999
+```
+
 ## Vector Data
 
 
 Use ```ogrinfo``` to list information about vector data:
 
+#### Shapefiles
 ```
 $ ogrinfo shapefiles/ZipCodes.shp
 ```
@@ -152,7 +200,7 @@ state: String (254.0)
 zip: String (254.0)
 ```
 
-geoJSON
+#### GeoJSON
 
 ```
 $ ogrinfo -so geojson/sfbayhighways.geojson sfbayhighways
@@ -202,7 +250,7 @@ label: String (0.0)
 bbox: RealList (0.0)
 ```
 
-Geodatabases
+#### Geodatabases
 
 ```
 $ ogrinfo geodatabases/SanFranciscoESI.gdb -so birds_polygon
