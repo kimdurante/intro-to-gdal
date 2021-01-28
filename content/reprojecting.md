@@ -12,7 +12,7 @@ nav_order: 4
 Use ```gdal_warp``` to reproject raster data.
 
 ```
-gdalwarp -t_srs (srs, old, new)```
+gdalwarp -t_srs (srs, old, new)
 ```
 
 ```
