@@ -100,9 +100,13 @@ $ gdalinfo -stats geotiffs/SF1987.tif
 
 ## Vector Data
 
+
 Use ```ogrinfo``` to list information about vector data:
 
-```$ ogrinfo shapefiles/ZipCodes.shp```
+```
+$ ogrinfo shapefiles/ZipCodes.shp
+```
+Output:
 
 ```
 INFO: Open of `shapefiles/ZipCodes.shp'
@@ -110,7 +114,7 @@ INFO: Open of `shapefiles/ZipCodes.shp'
 1: ZipCodes (Polygon)
 ```
 
-Use the summary output flag (```_so```) to display projection, schema, feature count and extent information:
+Use the summary output flag (```-so```) to display projection, schema, feature count and extent information:
 
 ```
 $ ogrinfo -so shapefiles/ZipCodes.shp -so ZipCodes
