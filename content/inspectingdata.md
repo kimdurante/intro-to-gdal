@@ -10,7 +10,7 @@ Exploring raster and vector data properties
 
 ## Raster Data 
 
-Use _gdalinfo_ to list information about a raster dataset. This will output properties about the data including file format, coordinates, projection, and raster band information:
+Use ```gdalinfo``` to list information about a raster dataset. This will output properties about the data including file format, coordinates, projection, and raster band information:
 
 ```
 $ gdalinfo geotiffs/SF1987.tif
@@ -35,7 +35,7 @@ Band 2 Block=6244x1 Type=Byte, ColorInterp=Green
 Band 3 Block=6244x1 Type=Byte, ColorInterp=Blue
 ```
 
-Use flags _-norat_ and _-nomd_ to supress output of metadata and raster attributes
+Use flags ```-norat``` and ```-nomd``` to supress output of metadata and raster attributes
 
 ```
 $ gdalinfo -norat -nomd geotiffs/SF1869.tif
@@ -44,7 +44,7 @@ $ gdalinfo -norat -nomd geotiffs/SF1869.tif
 
 ## Vector Data
 
-Use _ogrinfo_ to list information about vector data.
+Use ```ogrinfo``` to list information about vector data.
 
 ```$ ogrinfo shapefiles/ZipCodes.shp```
 
@@ -54,7 +54,7 @@ INFO: Open of `shapefiles/ZipCodes.shp'
 1: ZipCodes (Polygon)
 ```
 
-Use the summary output flag to display projection, schema, feature count and extent information:
+Use the summary output flag (```_so```) to display projection, schema, feature count and extent information:
 
 ```
 $ ogrinfo -so shapefiles/ZipCodes.shp -so ZipCodes
