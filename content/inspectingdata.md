@@ -86,16 +86,21 @@ Band 2 Block=6244x1 Type=Byte, ColorInterp=Green
 Band 3 Block=6244x1 Type=Byte, ColorInterp=Blue
 ```
 
-Some datasets may contain a lot of metadata strings. Use flags ```-norat``` and ```-nomd``` to supress output of metadata and raster attributes
+Some datasets may contain a lot of metadata strings. Use flags ```-norat``` and ```-nomd``` to supress output of metadata and raster attributes:
 
 ```
 $ gdalinfo -norat -nomd geotiffs/SF1869.tif
 ```
 
+Use the ```-stats``` flag to compute image statistics:
+
+```
+$ gdalinfo -stats geotiffs/SF1987.tif
+```
 
 ## Vector Data
 
-Use ```ogrinfo``` to list information about vector data.
+Use ```ogrinfo``` to list information about vector data:
 
 ```$ ogrinfo shapefiles/ZipCodes.shp```
 
