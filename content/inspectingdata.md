@@ -11,12 +11,14 @@ nav_order: 2
 Use gdalinfo to list information about raster data:
 
 Input
+
 {: .label .label-green }
 ```
 $ gdalinfo geotiffs/SF1987.tif
 ```
 
 Output
+
 {: .label .label-yellow }
 ```
 Driver: GTiff/GeoTIFF
@@ -34,6 +36,17 @@ Band 1 Block=6244x1 Type=Byte, ColorInterp=Red
 Band 2 Block=6244x1 Type=Byte, ColorInterp=Green
 Band 3 Block=6244x1 Type=Byte, ColorInterp=Blue
 ```
+
+Input
+
+{: .label .label-green }
+```
+$ gdalinfo -norat -nomd geotiffs/SF1869.tif
+```
+
+Output
+
+{: .label .label-yellow }
 
 ## Vector Data
 
