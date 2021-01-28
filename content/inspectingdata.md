@@ -117,7 +117,7 @@ INFO: Open of `shapefiles/ZipCodes.shp'
 Use the summary output flag (```-so```) to display projection, schema, feature count and extent information:
 
 ```
-$ ogrinfo -so shapefiles/ZipCodes.shp -so ZipCodes
+$ ogrinfo -so shapefiles/ZipCodes.shp ZipCodes
 ```
 
 Output:
@@ -155,5 +155,50 @@ zip: String (254.0)
 geoJSON
 
 ```
-ogrinfo -so SF/sfbayhighways.geojson sfbayhighways
+ogrinfo -so geojson/sfbayhighways.geojson sfbayhighways
 ```
+
+Output:
+
+```
+INFO: Open of `geojson/sfbayhighways.geojson'
+      using driver `GeoJSON' successful.
+
+Layer name: sfbayhighways
+Geometry: Multi Line String
+Feature Count: 657
+Extent: (-123.518512, 36.917289) - (-121.214302, 38.852543)
+Layer SRS WKT:
+GEOGCRS["WGS 84",
+    DATUM["World Geodetic System 1984",
+        ELLIPSOID["WGS 84",6378137,298.257223563,
+            LENGTHUNIT["metre",1]]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["geodetic latitude (Lat)",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["geodetic longitude (Lon)",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    ID["EPSG",4326]]
+Data axis to CRS axis mapping: 2,1
+id: String (0.0)
+fnode_: Integer (0.0)
+tnode_: Integer (0.0)
+lpoly_: Integer (0.0)
+rpoly_: Integer (0.0)
+length: Real (0.0)
+st_hwy_dis: Integer (0.0)
+st_hwy_d_1: Real (0.0)
+rte: Integer (0.0)
+status: Integer (0.0)
+funccl: Integer (0.0)
+numlane: String (0.0)
+accont: Integer (0.0)
+rsys: Integer (0.0)
+label: String (0.0)
+bbox: RealList (0.0)
+```
+
