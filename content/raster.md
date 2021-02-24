@@ -1,22 +1,22 @@
 ---
 layout: default
-title: Raster Data
+title: Raster Data (GDAL)
 nav_order: 2
 ---
 
-## GDAL Operations for Raster Data
+## Working with Raster Data
 
-GDAL supports a wide-range of raster formats through the use of drivers which contain specifications and capabilities for reading and writing data. The list of raster drivers currently supported by GDAL can be found here: [https://gdal.org/drivers/raster/index.html](https://gdal.org/drivers/raster/index.html).
+GDAL supports a wide-range of raster formats through the use of drivers which contain specifications and capabilities for handling data. The list of raster drivers currently supported by GDAL can be found here: [https://gdal.org/drivers/raster/index.html](https://gdal.org/drivers/raster/index.html).
 
-[Inspecting Data](#inspecting-data-gdalinfo)
+[Exploring Data](#exploring-data-gdalinfo)
 
 [Converting Data](#converting-data-gdal_translate)
 
 [Warping Data](#warping-data-gdalwarp)
 
-## Inspecting Data (gdalinfo)
+## Exploring Data (gdalinfo)
 
-Use ```gdalinfo``` to list information about a raster dataset. This will output properties about the data including file format, projection, extent, metadata, and raster band information.
+Use ```gdalinfo``` to list information about raster data. This will output data properties including file format, projection, extent, metadata, and raster band information.
 
 Run the following command:
 
