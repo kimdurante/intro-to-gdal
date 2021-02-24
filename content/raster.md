@@ -8,9 +8,11 @@ nav_order: 2
 
 GDAL supports a wide-range of raster formats through the use of drivers which contain specifications and capabilities for reading and writing data. The list of raster drivers currently supported by GDAL can be found here: [https://gdal.org/drivers/raster/index.html](https://gdal.org/drivers/raster/index.html).
 
-Inspecting Data
-Converting Data
-Warping Data
+[Inspecting Data]
+
+[Converting Data](converting-data-(gdal_translate))
+
+[Warping Data]()
 
 ## Inspecting Data (gdalinfo)
 
