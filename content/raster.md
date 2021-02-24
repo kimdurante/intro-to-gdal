@@ -4,15 +4,20 @@ title: Raster Data (GDAL)
 nav_order: 2
 ---
 
-## Working with Raster Data
-
-GDAL supports a wide-range of raster formats through the use of drivers which contain specifications and capabilities for handling data. The list of raster drivers currently supported by GDAL can be found here: [https://gdal.org/drivers/raster/index.html](https://gdal.org/drivers/raster/index.html).
+[Drivers](#gdal-drivers)
 
 [Exploring Data](#exploring-data-gdalinfo)
 
 [Converting Data](#converting-data-gdal_translate)
 
 [Warping Data](#warping-data-gdalwarp)
+
+## GDAL Drivers
+
+GDAL provides support for a wide-range of raster formats through the use of drivers which contain specifications and capabilities for handling data. The list of raster drivers currently supported by GDAL can be found here
+
+[https://gdal.org/drivers/raster/index.html](https://gdal.org/drivers/raster/index.html).
+
 
 ## Exploring Data (gdalinfo)
 
