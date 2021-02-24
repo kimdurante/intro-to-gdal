@@ -7,6 +7,9 @@ nav_order: 3
 
 ## Vector Data
 
+See a list of available formats:
+
+```$ ogr2ogr --formats```
 
 Use ```ogrinfo``` to list information about vector data:
 
