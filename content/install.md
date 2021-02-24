@@ -6,14 +6,41 @@ nav_order: 1
 
 ## Installing GDAL
 
-Install GDAL/OGR on Windows, Mac, or Linux by following the instructions here:
 
-[https://developers.planet.com/planetschool/gdal-qgis-installation-setup/](https://developers.planet.com/planetschool/gdal-qgis-installation-setup/)
+### On a Mac
 
-Verify that GDAL is installed properly by opening a terminal and running the following command:
+Download the GDAL Complete framework appropriate for your operating system here
+
+[http://www.kyngchaos.com/software/frameworks](http://www.kyngchaos.com/software/frameworks)
+
+After the installation is complete, open your terminal and run the following command
+
+ ```
+ echo 'export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH' >> ~/.bash_profile
+ ```
+
+  Hit enter after that line, and run
+  
+```
+source ~/.bash_profile
+```
+
+Verify that GDAL is installed properly by opening a terminal and running the following command
 
 ```
 gdalinfo --version
 ```
 
-For Windows users, the OSGeo4W Shell is used for running GDAL. This shell is will be automatically installed when completing the above.
+### On Windows
+
+Use the OSGEO4W Installer to download & install GDAL
+
+[https://trac.osgeo.org/osgeo4w](https://trac.osgeo.org/osgeo4w)
+
+Once installation is complete, you'll use the OSGeo4W Shell to access GDAL. This shell is automatically installed when following the instructions above. 
+
+Verify that the installation was successful by opening the OSGeo4W Shell and running the following command
+
+```
+gdalinfo --version
+```
