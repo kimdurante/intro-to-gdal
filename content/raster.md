@@ -10,7 +10,7 @@ GDAL supports a wide-range of raster formats through the use of drivers which co
 
 [Inspecting Data]
 
-[Converting Data](#converting-data-%28gdal_translate%29)
+[Converting Data](#converting-data-(gdal_translate))
 
 [Warping Data]()
 
