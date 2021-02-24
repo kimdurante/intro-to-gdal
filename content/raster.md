@@ -23,15 +23,15 @@ GDAL provides support for a wide-range of raster formats through the use of driv
 
 ## Exploring Data (gdalinfo)
 
-Use ```gdalinfo``` to list information about raster data. This will output data properties including file format, projection, extent, metadata, and raster band information.
+Use ```gdalinfo``` to list information about raster data. This will output data properties including file format, projection, extent, metadata, and raster band information
 
-Run the following command:
+Run the following command
 
 ```
-$ gdalinfo geotiffs/SF1987.tif
+$ gdalinfo SF/SF1987.tif
 ```
 
-You should see a large block of output text, beginning with:
+You should see a large block of output text, beginning with
 
 ```
 Driver: GTiff/GeoTIFF
@@ -40,7 +40,7 @@ Driver: GTiff/GeoTIFF
 This indicates that the file is a GeoTIFF, which is a special type of TIFF that stores the information necessary to place each pixel in the image on the surface of the Earth. The next lines of text display the filename, and the size (in pixels) of the image.
 
 ```
-Files: geotiffs/SF1987.tif
+Files: SF/SF1987.tif
 Size is 6244, 7581
 ```
 
@@ -75,7 +75,7 @@ PROJCRS["NAD83 / UTM zone 10N",
             LENGTHUNIT["metre",1],
             ID["EPSG",8807]]],
 ```
-The output also contains some generic metadata for the file:
+The output also contains some generic metadata for the file
 ```
 Metadata:
   AGENCY=WESTERN MAPPING CENTER (WMC) oversight agency*
@@ -127,18 +127,20 @@ Band 2 Block=6244x1 Type=Byte, ColorInterp=Green
 Band 3 Block=6244x1 Type=Byte, ColorInterp=Blue
 ```
 
-Use flags ```-norat``` and ```-nomd``` to supress output of metadata and raster attributes:
+Use flags ```-norat``` and ```-nomd``` to supress output of metadata and raster attributes
 
 ```
-$ gdalinfo -norat -nomd geotiffs/SF1987.tif
+$ gdalinfo -norat -nomd SF/SF1987.tif
 ```
 
 Let's look at the information for one of the digital elevation models:
 
 ```
-$ gdalinfo dem/gt30w140n40_dem/gt30w140n40.dem
+$ gdalinfo DEM/gt30w140n40_dem/gt30w140n40.dem
 
+```
 
+```
 Driver: EHdr/ESRI .hdr Labelled
 Files: gt30w140n40_dem/gt30w140n40.dem
        gt30w140n40_dem/gt30w140n40.dem.aux.xml
@@ -162,7 +164,7 @@ GEOGCRS["WGS 84",
             ANGLEUNIT["degree",0.0174532925199433]],
     ID["EPSG",4326]]
 
-...
+   ...
 
 Band 1 Block=4800x1 Type=Int16, ColorInterp=Undefined
   Min=-66.000 Max=4280.000 
@@ -172,18 +174,13 @@ Band 1 Block=4800x1 Type=Int16, ColorInterp=Undefined
 ```
 ## Converting Data (gdal_translate)
 
-The gdal_translate utility can be used to convert raster data between different formats, potentially performing some operations like subsettings, resampling, and rescaling pixels in the process.
+The gdal_translate utility can be used to convert raster data between different formats, potentially performing some operations like subsettings, resampling, and rescaling pixels in the process
 
-See a list of available formats:
+See a list of available formats
 
 ```$ gdal_translate --formats```
 
-This command uses the following syntax:
-
-```
-$ gdal_translate -of (of, old, new)
-```
-The ```-of``` flag is used to specify the output format. 
+The ```-of``` flag is used to specify the output format. If not specified, the format is guessed from the extension. Use the short format name
 
 Converting a GeoTIFF to a PNG:
 
@@ -191,6 +188,10 @@ Converting a GeoTIFF to a PNG:
 $ gdal_translate -of png SF/SF1987.tif SF/SF1987_converted.png
 ```
 
+Use the creation options flag```-co``` along with ```COMPRESS=JPEG``` output a JPEG compressed GeoTIFF
+```
+$ gdal_translate -co COMPRESS=JPEG SF/SF1993.tif SF/SF1993_compressed.tif
+```
 ## Warping Data (gdalwarp)
 
 The gdalwarp utility is an image mosaicing, reprojection and warping utility. The program can reproject to any supported projection, and can also apply GCPs stored with the image if the image is “raw” with control information.
