@@ -4,11 +4,13 @@ title: Raster Data
 nav_order: 2
 ---
 
-## Using GDAL with Raster Data
+## GDAL Operations for Raster Data
 
-GDAL supports a wide-range of raster formats through the use of drivers which contain specifications and capabilities for reading and writing data. 
+GDAL supports a wide-range of raster formats through the use of drivers which contain specifications and capabilities for reading and writing data. The list of raster drivers currently supported by GDAL can be found here: [https://gdal.org/drivers/raster/index.html](https://gdal.org/drivers/raster/index.html).
 
-The list of raster drivers currently supported by GDAL can be found here: [https://gdal.org/drivers/raster/index.html](https://gdal.org/drivers/raster/index.html).
+Inspecting Data
+Converting Data
+Warping Data
 
 ## Inspecting Data (gdalinfo)
 
@@ -161,7 +163,7 @@ Band 1 Block=4800x1 Type=Int16, ColorInterp=Undefined
 ```
 ## Converting Data (gdal_translate)
 
-Use gdal_translate to convert raster data from one format to another.
+The gdal_translate utility can be used to convert raster data between different formats, potentially performing some operations like subsettings, resampling, and rescaling pixels in the process.
 
 This command uses the following syntax:
 
