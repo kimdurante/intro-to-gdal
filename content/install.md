@@ -9,6 +9,8 @@ nav_order: 1
 
 ### On a Mac
 
+
+
 Download the GDAL Complete framework appropriate for your operating system here
 
 [http://www.kyngchaos.com/software/frameworks](http://www.kyngchaos.com/software/frameworks)
@@ -32,6 +34,8 @@ $ gdalinfo --version
 ```
 
 ### On Windows
+
+
 
 Use the OSGEO4W Installer to download & install GDAL
 
