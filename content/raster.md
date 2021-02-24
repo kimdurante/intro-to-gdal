@@ -6,13 +6,16 @@ nav_order: 2
 
 ## Using GDAL with Raster Data
 
-GDAL supports a wide-range of raster formats through the use of drivers which contain specifications and capabilities for reading and writing data. The list of raster drivers currently supported by GDAL can be found here: (https://gdal.org/drivers/raster/index.html)[https://gdal.org/drivers/raster/index.html].
+GDAL supports a wide-range of raster formats through the use of drivers which contain specifications and capabilities for reading and writing data. 
 
-## Raster Data 
+The list of raster drivers currently supported by GDAL can be found here: [https://gdal.org/drivers/raster/index.html](https://gdal.org/drivers/raster/index.html).
 
-Use ```gdalinfo``` to list information about a raster dataset. This will output properties about the data including file format, projection, extent, metadata, and raster band information:
+## Inspecting Data
 
-### GeoTIFFs
+Use ```gdalinfo``` to list information about a raster dataset. This will output properties about the data including file format, projection, extent, metadata, and raster band information.
+
+Run the following command:
+
 ```
 $ gdalinfo geotiffs/SF1987.tif
 ```
