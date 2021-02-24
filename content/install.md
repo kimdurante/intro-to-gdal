@@ -20,7 +20,10 @@ Once installed, open a terminal window and run the folowing command:
 
 Or, save it to your profile:
 
-Test the installation:
+```echo 'export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH' >> ~/.bash_profile
+source ~/.bash_profile```
+
+To test your installation, run the terminal command:
 
 ```gdalinfo --version```
 
