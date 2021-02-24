@@ -4,6 +4,8 @@ title: Raster Data (GDAL)
 nav_order: 2
 ---
 
+## Working with Raster Data
+
 [Drivers](#gdal-drivers)
 
 [Exploring Data](#exploring-data-gdalinfo)
