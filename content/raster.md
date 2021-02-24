@@ -22,7 +22,9 @@ $ gdalinfo geotiffs/SF1987.tif
 
 You should see a large block of output text, beginning with:
 
-```Driver: GTiff/GeoTIFF```
+```
+Driver: GTiff/GeoTIFF
+```
 
 This indicates that the file is a GeoTIFF, which is a special type of TIFF that stores the information necessary to place each pixel in the image on the surface of the Earth. The next lines of text display the filename, and the size (in pixels) of the image.
 
