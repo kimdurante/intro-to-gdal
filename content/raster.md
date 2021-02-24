@@ -8,11 +8,11 @@ nav_order: 2
 
 GDAL supports a wide-range of raster formats through the use of drivers which contain specifications and capabilities for reading and writing data. The list of raster drivers currently supported by GDAL can be found here: [https://gdal.org/drivers/raster/index.html](https://gdal.org/drivers/raster/index.html).
 
-[Inspecting Data]
+[Inspecting Data](#inspecting-data-gdalinfo)
 
 [Converting Data](#converting-data-gdal_translate)
 
-[Warping Data]()
+[Warping Data](#warping-data-gdalwarp)
 
 ## Inspecting Data (gdalinfo)
 
@@ -179,6 +179,10 @@ Converting a GeoTIFF to a PNG:
 ```
 $ gdal_translate -of png SF/SF1987.tif SF/SF1987_converted.png
 ```
+
+## Warping Data (gdalwarp)
+
+The gdalwarp utility is an image mosaicing, reprojection and warping utility. The program can reproject to any supported projection, and can also apply GCPs stored with the image if the image is “raw” with control information
 
 See a list of available formats:
 
