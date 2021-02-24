@@ -63,7 +63,6 @@ PROJCRS["NAD83 / UTM zone 10N",
         PARAMETER["False northing",0,
             LENGTHUNIT["metre",1],
             ID["EPSG",8807]]],
-
 ```
 The output also contains some generic metadata for the file:
 ```
@@ -85,11 +84,27 @@ Metadata:
   QUADRANT=SE quadrant indicator if cell size = 3.75-minutes*
   RASTER_ORDER=LEFT_RIGHT/TOP_BOTTOM video display order*
   RMSE_XY=3.40 doq horiz. accuracy*
+  SECONDARY_HORIZONTAL_DATUM=NAD27 secondary horizontal datum*
+  SECONDARY_NE_QUAD_XY=555014.390 4184990.576 XY coords. - sec. NE quad cor.*
+  SECONDARY_NW_QUAD_XY=549512.904 4184955.623 XY coords. - sec. NW quad cor.*
+  SECONDARY_SE_QUAD_XY=555060.733 4178056.378 XY coords. - sec. SE quad cor.*
+  SECONDARY_SW_QUAD_XY=549554.612 4178021.444 XY coords. - sec. SW quad cor.*
+  SECONDARY_XY_ORIGIN=549211.000 4185301.000 coord upper left pixel sec datum*
+  SE_QUAD_CORNER_XY=555059.365 4178261.445 XY coords. of pri. SE quad corner*
+  SOURCE_DEM_DATE=1998 1 29 source dem date yyyy mm dd*
+  SOURCE_IMAGE_DATE=1987 6 22 source image date as yyyy mm dd*
+  SOURCE_IMAGE_ID=NAPP 511 125 source image id*
+  SOUTH_LATITUDE=37 45 0.000 signed deg min sec SDDD MM SS.SSS*
+  STANDARD_VERSION=1996 12 version of DOQ standard*
+  STATE=CA state fip code*
+  SW_QUAD_CORNER_XY=549553.381 4178226.512 XY coords. of pri. SW quad corner*
+  WEST_LONGITUDE=-122 26 15.000 signed deg min sec SDDD MM SS.SSS*
 
 ```
+
+The last block of output shows the corner points of the image in two different units (meters and minutes, degrees, seconds), as well as some information about each band (also called a channel) in the image. Each channel is byte (8-bit) format, there are three bands (red, green, and blue, respectively). The minimum and maximum values in each band are also displayed.
+
 ```
-Image Structure Metadata:
-  INTERLEAVE=BAND
 Corner Coordinates:
 Upper Left  (  549115.000, 4185497.000) (122d26'31.14"W, 37d48'55.98"N)
 Lower Left  (  549115.000, 4177916.000) (122d26'32.99"W, 37d44'50.01"N)
@@ -100,6 +115,15 @@ Band 1 Block=6244x1 Type=Byte, ColorInterp=Red
 Band 2 Block=6244x1 Type=Byte, ColorInterp=Green
 Band 3 Block=6244x1 Type=Byte, ColorInterp=Blue
 ```
+
+
+
+
+
+
+
+
+
 
 Some datasets may contain a lot of metadata strings. Use flags ```-norat``` and ```-nomd``` to supress output of metadata and raster attributes:
 
