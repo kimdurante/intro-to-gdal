@@ -33,7 +33,7 @@ Files: geotiffs/SF1987.tif
 Size is 6244, 7581
 ```
 
-Below that, you will see some very important information
+Below that, you will see some very important information which contains the projection of the data. This is the information that places this image correctly over the city of San Francisco, and specifies the location of each pixel.
 
 ```
 Coordinate System is:
@@ -65,8 +65,7 @@ PROJCRS["NAD83 / UTM zone 10N",
             ID["EPSG",8807]]],
 
 ```
-This is the information that places this image correctly over the city of San Francisco, and specifies the location of each pixel.
-
+The output also contains some generic metadata for the file:
 ```
 Metadata:
   AGENCY=WESTERN MAPPING CENTER (WMC) oversight agency*
