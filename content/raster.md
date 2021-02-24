@@ -33,7 +33,8 @@ Size is 6244, 7581
 
 Below that, you will see some very important information
 
-```Coordinate System is:
+```
+Coordinate System is:
 PROJCRS["NAD83 / UTM zone 10N",
     BASEGEOGCRS["NAD83",
         DATUM["North American Datum 1983",
@@ -60,9 +61,8 @@ PROJCRS["NAD83 / UTM zone 10N",
         PARAMETER["False northing",0,
             LENGTHUNIT["metre",1],
             ID["EPSG",8807]]],
-            
-```
 
+```
 This is the information that places this image correctly over the city of San Francisco, and specifies the location of each pixel.
 
 ```
@@ -120,7 +120,6 @@ gdalinfo dem/gt30w140n40_dem/gt30w140n40.dem
 
 Output:
 
-```
 Driver: EHdr/ESRI .hdr Labelled
 Files: gt30w140n40_dem/gt30w140n40.dem
        gt30w140n40_dem/gt30w140n40.dem.aux.xml
@@ -156,7 +155,7 @@ Band 1 Block=4800x1 Type=Int16, ColorInterp=Undefined
   Min=-66.000 Max=4280.000 
   Minimum=-66.000, Maximum=4280.000, Mean=1329.977, StdDev=744.157
   NoData Value=-9999
-```
+
 
 ## Vector Data
 
