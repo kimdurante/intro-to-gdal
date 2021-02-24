@@ -116,34 +116,17 @@ Band 2 Block=6244x1 Type=Byte, ColorInterp=Green
 Band 3 Block=6244x1 Type=Byte, ColorInterp=Blue
 ```
 
-
-
-
-
-
-
-
-
-
-Some datasets may contain a lot of metadata strings. Use flags ```-norat``` and ```-nomd``` to supress output of metadata and raster attributes:
+Use flags ```-norat``` and ```-nomd``` to supress output of metadata and raster attributes:
 
 ```
-$ gdalinfo -norat -nomd geotiffs/SF1869.tif
+$ gdalinfo -norat -nomd geotiffs/SF1987.tif
 ```
 
-Use the ```-stats``` flag to compute image statistics:
+Let's look at the information for one of the digital elevation models:
 
 ```
-$ gdalinfo -stats geotiffs/SF1987.tif
-```
+$ gdalinfo dem/gt30w140n40_dem/gt30w140n40.dem
 
-### Digital Elevation Models (DEM)
-
-```
-gdalinfo dem/gt30w140n40_dem/gt30w140n40.dem
-```
-
-Output:
 
 Driver: EHdr/ESRI .hdr Labelled
 Files: gt30w140n40_dem/gt30w140n40.dem
@@ -167,19 +150,22 @@ GEOGCRS["WGS 84",
             ORDER[2],
             ANGLEUNIT["degree",0.0174532925199433]],
     ID["EPSG",4326]]
-Data axis to CRS axis mapping: 2,1
-Origin = (-140.000000000000000,39.999999999999993)
-Pixel Size = (0.008333333333330,-0.008333333333330)
-Corner Coordinates:
-Upper Left  (-140.0000000,  40.0000000) (140d 0' 0.00"W, 40d 0' 0.00"N)
-Lower Left  (-140.0000000, -10.0000000) (140d 0' 0.00"W, 10d 0' 0.00"S)
-Upper Right (-100.0000000,  40.0000000) (100d 0' 0.00"W, 40d 0' 0.00"N)
-Lower Right (-100.0000000, -10.0000000) (100d 0' 0.00"W, 10d 0' 0.00"S)
-Center      (-120.0000000,  15.0000000) (120d 0' 0.00"W, 15d 0' 0.00"N)
+
+...
+
 Band 1 Block=4800x1 Type=Int16, ColorInterp=Undefined
   Min=-66.000 Max=4280.000 
   Minimum=-66.000, Maximum=4280.000, Mean=1329.977, StdDev=744.157
   NoData Value=-9999
+
+```
+
+
+
+
+
+
+
 
 
 ## Vector Data
