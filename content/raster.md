@@ -10,7 +10,7 @@ GDAL supports a wide-range of raster formats through the use of drivers which co
 
 The list of raster drivers currently supported by GDAL can be found here: [https://gdal.org/drivers/raster/index.html](https://gdal.org/drivers/raster/index.html).
 
-## Inspecting Data
+## Inspecting Data (gdalinfo)
 
 Use ```gdalinfo``` to list information about a raster dataset. This will output properties about the data including file format, projection, extent, metadata, and raster band information.
 
@@ -159,3 +159,23 @@ Band 1 Block=4800x1 Type=Int16, ColorInterp=Undefined
   NoData Value=-9999
 
 ```
+## Converting Data (gdal_translate)
+
+Use gdal_translate to convert raster data from one format to another.
+
+This command uses the following syntax:
+
+```
+$ gdal_translate -of (of, old, new)
+```
+The ```-of``` flag is used to specify the output format. 
+
+Converting a GeoTIFF to a PNG:
+
+```
+$ gdal_translate -of png SF/SF1987.tif SF/SF1987_converted.png
+```
+
+See a list of available formats:
+
+```$ gdal_translate --formats```
