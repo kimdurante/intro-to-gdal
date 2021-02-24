@@ -10,7 +10,7 @@ GDAL supports a wide-range of raster formats through the use of drivers which co
 
 [Inspecting Data]
 
-[Converting Data](#converting-data)
+[Converting Data](#converting-data\(gdal_translate\))
 
 [Warping Data]()
 
@@ -163,7 +163,7 @@ Band 1 Block=4800x1 Type=Int16, ColorInterp=Undefined
   NoData Value=-9999
 
 ```
-## Converting Data
+## Converting Data (gdal_translate)
 
 The gdal_translate utility can be used to convert raster data between different formats, potentially performing some operations like subsettings, resampling, and rescaling pixels in the process.
 
