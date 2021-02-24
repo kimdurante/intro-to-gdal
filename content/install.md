@@ -16,19 +16,19 @@ Download the GDAL Complete framework appropriate for your operating system here
 After the installation is complete, open your terminal and run the following command
 
  ```
- echo 'export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH' >> ~/.bash_profile
+ $ echo 'export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH' >> ~/.bash_profile
  ```
 
   Hit enter after that line, and run
   
 ```
-source ~/.bash_profile
+$ source ~/.bash_profile
 ```
 
 Verify that GDAL is installed properly by opening a terminal and running the following command
 
 ```
-gdalinfo --version
+$ gdalinfo --version
 ```
 
 ### On Windows
@@ -42,5 +42,5 @@ Once installation is complete, you'll use the OSGeo4W Shell to access GDAL. This
 Verify that the installation was successful by opening the OSGeo4W Shell and running the following command
 
 ```
-gdalinfo --version
+$ gdalinfo --version
 ```
