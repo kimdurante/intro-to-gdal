@@ -195,3 +195,7 @@ $ gdal_translate -co COMPRESS=JPEG SF/SF1993.tif SF/SF1993_compressed.tif
 ## Warping Data (gdalwarp)
 
 The gdalwarp utility is an image mosaicing, reprojection and warping utility. The program can reproject to any supported projection, and can also apply GCPs stored with the image if the image is “raw” with control information.
+
+```
+$ gdalwarp -t_srs EPSG:4326 SF/SF1987.tif SF/SF1987_wgs84.tif
+```
