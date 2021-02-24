@@ -26,8 +26,10 @@ You should see a large block of output text, beginning with:
 
 This indicates that the file is a GeoTIFF, which is a special type of TIFF that stores the information necessary to place each pixel in the image on the surface of the Earth. The next lines of text display the filename, and the size (in pixels) of the image.
 
-``Files: geotiffs/SF1987.tif
-Size is 6244, 7581``
+```
+Files: geotiffs/SF1987.tif
+Size is 6244, 7581
+```
 
 Below that, you will see some very important information
 
@@ -63,41 +65,7 @@ PROJCRS["NAD83 / UTM zone 10N",
 
 This is the information that places this image correctly over the city of San Francisco, and specifies the location of each pixel.
 
-
-
-Driver: GTiff/GeoTIFF
-Files: geotiffs/SF1987.tif
-Size is 6244, 7581
-Coordinate System is:
-PROJCRS["NAD83 / UTM zone 10N",
-    BASEGEOGCRS["NAD83",
-        DATUM["North American Datum 1983",
-            ELLIPSOID["GRS 1980",6378137,298.257222101,
-                LENGTHUNIT["metre",1]]],
-        PRIMEM["Greenwich",0,
-            ANGLEUNIT["degree",0.0174532925199433]],
-        ID["EPSG",4269]],
-    CONVERSION["UTM zone 10N",
-        METHOD["Transverse Mercator",
-            ID["EPSG",9807]],
-        PARAMETER["Latitude of natural origin",0,
-            ANGLEUNIT["degree",0.0174532925199433],
-            ID["EPSG",8801]],
-        PARAMETER["Longitude of natural origin",-123,
-            ANGLEUNIT["degree",0.0174532925199433],
-            ID["EPSG",8802]],
-        PARAMETER["Scale factor at natural origin",0.9996,
-            SCALEUNIT["unity",1],
-            ID["EPSG",8805]],
-        PARAMETER["False easting",500000,
-            LENGTHUNIT["metre",1],
-            ID["EPSG",8806]],
-        PARAMETER["False northing",0,
-            LENGTHUNIT["metre",1],
-            ID["EPSG",8807]]],
-                
-...
-
+```
 Metadata:
   AGENCY=WESTERN MAPPING CENTER (WMC) oversight agency*
   AREA_OR_POINT=Area
@@ -117,8 +85,8 @@ Metadata:
   RASTER_ORDER=LEFT_RIGHT/TOP_BOTTOM video display order*
   RMSE_XY=3.40 doq horiz. accuracy*
 
-...
-
+```
+```
 Image Structure Metadata:
   INTERLEAVE=BAND
 Corner Coordinates:
