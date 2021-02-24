@@ -167,6 +167,10 @@ Band 1 Block=4800x1 Type=Int16, ColorInterp=Undefined
 
 The gdal_translate utility can be used to convert raster data between different formats, potentially performing some operations like subsettings, resampling, and rescaling pixels in the process.
 
+See a list of available formats:
+
+```$ gdal_translate --formats```
+
 This command uses the following syntax:
 
 ```
@@ -182,8 +186,4 @@ $ gdal_translate -of png SF/SF1987.tif SF/SF1987_converted.png
 
 ## Warping Data (gdalwarp)
 
-The gdalwarp utility is an image mosaicing, reprojection and warping utility. The program can reproject to any supported projection, and can also apply GCPs stored with the image if the image is “raw” with control information
-
-See a list of available formats:
-
-```$ gdal_translate --formats```
+The gdalwarp utility is an image mosaicing, reprojection and warping utility. The program can reproject to any supported projection, and can also apply GCPs stored with the image if the image is “raw” with control information.
