@@ -7,11 +7,29 @@ nav_order: 3
 
 ## Vector Data
 
-See a list of available formats:
+## Working with Vector Data
+
+[Drivers](#ogr-drivers)
+
+[Exploring Data](#exploring-data-ogrinfo)
+
+[Converting Data](#converting-data-ogr2ogr)
+
+[Reprojecting Data](#reprojecting-data-ogr2ogr)
+
+## OGR Drivers
+
+See a list of available formats
 
 ```$ ogr2ogr --formats```
 
+
+## Exploring Data (ogrinfo)
+
 Use ```ogrinfo``` to list information about vector data:
+
+## Converting Data (ogr2ogr)
+
 
 ### Shapefiles
 ```
