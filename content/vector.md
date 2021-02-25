@@ -27,16 +27,13 @@ See a list of available formats
 
 ## Exploring Data (ogrinfo)
 
-Use ```ogrinfo``` to list information about vector data:
+Use ```ogrinfo``` to list information about vector data
 
-## Converting Data (ogr2ogr)
+Let's look at a shapefile
 
-
-### Shapefiles
 ```
 $ ogrinfo shapefiles/ZipCodes.shp
 ```
-Output:
 
 ```
 INFO: Open of `shapefiles/ZipCodes.shp'
@@ -49,8 +46,6 @@ Use the summary output flag (```-so```) to display projection, schema, feature c
 ```
 $ ogrinfo -so shapefiles/ZipCodes.shp ZipCodes
 ```
-
-Output:
 
 ```
 Layer name: ZipCodes
@@ -82,13 +77,11 @@ state: String (254.0)
 zip: String (254.0)
 ```
 
-### GeoJSON
+Let's explore a GeoJSON file
 
 ```
 $ ogrinfo -so geojson/sfbayhighways.geojson sfbayhighways
 ```
-
-Output:
 
 ```
 INFO: Open of `geojson/sfbayhighways.geojson'
@@ -132,13 +125,11 @@ label: String (0.0)
 bbox: RealList (0.0)
 ```
 
-### Geodatabases
+Geodatabases
 
 ```
 $ ogrinfo geodatabases/SanFranciscoESI.gdb -so birds_polygon
 ```
-
-Output:
 
 ```
 INFO: Open of `geodatabases/SanFranciscoESI.gdb'
@@ -176,3 +167,12 @@ Shape_Length: Real (0.0)
 Shape_Area: Real (0.0)
 
 ```
+## Converting Data (ogr2ogr)
+
+### Reprojecting Data (ogr2ogr)
+
+Use ```ogr2ogr``` with the target SRS flag (```t_srs```) to reproject vector data. 
+
+```ogr2ogr -t_srs (srs, new, old)```
+
+```ogr2ogr -t_srs EPSG:4326 SF/bus_stops_wgs84.shp SF/Bus_Stops.shp```
