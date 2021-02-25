@@ -16,6 +16,10 @@ nav_order: 3
 
 ## OGR Drivers
 
+The list of vector drivers currently supported by GDAL can be found here
+
+[https://gdal.org/drivers/vector/index.html](https://gdal.org/drivers/vector/index.html)
+
 See a list of available formats
 
 ```$ ogr2ogr --formats```
