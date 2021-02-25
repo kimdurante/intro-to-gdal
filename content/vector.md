@@ -4,9 +4,6 @@ title: Vector Data (OGR)
 nav_order: 3
 ---
 
-
-## Vector Data
-
 ## Working with Vector Data
 
 [Drivers](#ogr-drivers)
