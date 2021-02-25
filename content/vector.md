@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Vector Data
+title: Vector Data (OGR)
 nav_order: 3
 ---
 
