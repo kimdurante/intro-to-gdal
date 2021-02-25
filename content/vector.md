@@ -175,7 +175,14 @@ Convert a shapefile to a csv
 $ ogr2ogr -f csv SF/CivicArt.csv SF/CivicArt.shp
 ```
 
-### Reprojecting Data (ogr2ogr)
+Convert a shapefile to GeoJSON
+
+```
+$ ogr2ogr -f geojson SF/ZipCodes.geojson SF/ZipCodes.shp
+
+```
+
+## Reprojecting Data (ogr2ogr)
 
 Use ```ogr2ogr``` with the target SRS flag (```t_srs```) to reproject vector data. 
 
