@@ -8,10 +8,10 @@ nav_order: 2
 
 <br/>
 
-[Formats and Drivers](#gdal-formats-and-drivers)
-[Exploring Data](#exploring-data-gdalinfo)
-[Converting Data](#converting-data-gdal_translate)
-[Warping Data](#warping-data-gdalwarp)
+* [Formats and Drivers](#gdal-formats-and-drivers)
+* [Exploring Data](#exploring-data-gdalinfo)
+* [Converting Data](#converting-data-gdal_translate)
+* [Warping Data](#warping-data-gdalwarp)
 
 ## GDAL Formats and Drivers
 
