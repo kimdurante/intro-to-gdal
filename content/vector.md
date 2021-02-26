@@ -38,9 +38,9 @@ $ ogrinfo sfzipcodes.shp
 ```
 
 ```
-INFO: Open of `zipcodes.shp'
+INFO: Open of `sfzipcodes.shp'
       using driver `ESRI Shapefile' successful.
-1: zipcodes (Polygon)
+1: sfzipcodes (Polygon)
 ```
 
 Use the summary output flag (```-so```) to display projection, schema, feature count and extent information:
