@@ -218,7 +218,7 @@ $ ogr2ogr -f geojson sfzipcodes.geojson sfzipcodes.shp
 ```
 ## Reprojecting Data (ogr2ogr)
 
-Use ```ogr2ogr``` reproject data. Use the `t_srs` to specify the target spatial reference system (projection)
+Use ```ogr2ogr``` reproject data. Use the `t_srs` flag to specify the target spatial reference system (projection)
 
 ### Reproject data from EPSG:26910 to EPSG:4326
 ```
