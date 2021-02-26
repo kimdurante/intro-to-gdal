@@ -224,3 +224,9 @@ Use ```ogr2ogr``` reproject data. Use the `t_srs` flag to specify the target spa
 ```
 $ ogr2ogr -t_srs EPSG:4326 bus_stops_wgs84.shp Bus_Stops.shp
 ```
+
+### Reproject data from EPSG:26910 to EPSG:4326 and convert to GeoJSON
+
+```
+ogr2ogr -t_srs EPSG:4326 -f geojson bus_stops_wgs84.geojson Bus_Stops.shp
+```
