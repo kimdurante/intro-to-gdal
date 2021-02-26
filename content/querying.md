@@ -35,7 +35,7 @@ ogrinfo bus_stops_wgs84.shp -sql "SELECT COUNT(DISTINCT STOPID) FROM bus_stops_w
 
 Total unique stops: 23954
 
-How many stops are serviced by Sonoma County Transit?
+How many stops are serviced by San Francisco MUNI?
 
 ```
 $ ogrinfo bus_stops_wgs84.shp -sql "SELECT COUNT(*) FROM bus_stops_wgs84 WHERE AGENCY = 'San Francisco MUNI'"
