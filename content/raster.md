@@ -15,13 +15,12 @@ nav_order: 2
 
 ## GDAL Formats and Drivers
 <br/>
-
 GDAL provides support for a wide-range of raster file formats through the use of drivers which contain specifications and capabilities for handling data
 
 To view a list of available raster formats, run the following command
 
 ```
-gdal_translate --formats
+$ gdal_translate --formats
 ```
 The list of raster drivers currently supported by GDAL can be found here
 
@@ -30,7 +29,6 @@ The list of raster drivers currently supported by GDAL can be found here
 
 ## Exploring Data (gdalinfo)
 <br/>
-
 Use ```gdalinfo``` to list information about raster data. This will output data properties including file format, projection, extent, metadata, and raster band information
 
 ![San Francisco 1987](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/SF1987.png)
@@ -186,7 +184,6 @@ Band 1 Block=4800x1 Type=Int16, ColorInterp=Undefined
 ```
 ## Converting Data (gdal_translate)
 <br/>
-
 The gdal_translate utility can be used to convert raster data between different formats, as well as perform operationssuch as resampling, rescaling, and adding NoData values.
 
 The ```-of``` flag is used to specify the output format. If not specified, the format is guessed from the extension. Use the short format name
@@ -203,7 +200,6 @@ $ gdal_translate -co COMPRESS=JPEG SF/SF1993.tif SF/SF1993_compressed.tif
 ```
 ## Warping Data (gdalwarp)
 <br/>
-
 gdalwarp is a reprojection warping, and image mosaicing utility. It can reproject to any supported projection, and can also apply ground control points stored with the image if the image is “raw” with control information.
 
 ```
@@ -212,7 +208,6 @@ $ gdalwarp -t_srs EPSG:4326 SF/SF1987.tif SF/SF1987_wgs84.tif
 
 ## Tile Indexing
 <br/>
-
 Create a shapefile containing a record for each input raster file and a polygon geometry outlining the extent
 
 From one raster
