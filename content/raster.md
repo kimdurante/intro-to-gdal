@@ -50,7 +50,7 @@ Files: SF/SF1987.tif
 Size is 6244, 7581
 ```
 
-Below that is the projection infomration. This is the information that places this image correctly over the city of San Francisco, and specifies the location of each pixel.
+Below that is the projection information. This is the information that places this image correctly over the city of San Francisco, and specifies the location of each pixel.
 
 ```
 Coordinate System is:
