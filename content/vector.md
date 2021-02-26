@@ -45,7 +45,7 @@ INFO: Open of `sfzipcodes.shp'
 1: sfzipcodes (Polygon)
 ```
 
-This produces a brief output showing the filename, driver and layer name. Use the `-al` flag to display all feature information including projection, schema, feature count and extent information:
+This produces a brief output showing the filename, driver, layer name and geometry type. Use the `-al` flag to display all feature information including projection, schema, feature count and extent information:
 
 ```
 $ ogrinfo zipcodes.shp -al
