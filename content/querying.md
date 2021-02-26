@@ -35,27 +35,25 @@ ogrinfo bus_stops_wgs84.shp -sql "SELECT COUNT(DISTINCT STOPID) FROM bus_stops_w
 
 Total unique stops: 23954
 
-How many stops aRE serviced by Sonoma County Transit?
+How many stops are serviced by Sonoma County Transit?
 
 ```
-$ ogrinfo bus_stops_wgs84.shp -sql "SELECT COUNT(*) FROM bus_stops_wgs84 WHERE AGENCY = 'Sonoma County Transit'"
+$ ogrinfo bus_stops_wgs84.shp -sql "SELECT COUNT(*) FROM bus_stops_wgs84 WHERE AGENCY = 'San Francisco MUNI'"
 ```
 
 ```
 Layer name: bus_stops_wgs84
-
-COUNT_*: Integer (0.0)
+...
 OGRFeature(bus_stops_wgs84):0
-  COUNT_* (Integer) = 5719
+  COUNT_* (Integer) = 13880
 ```
 
-Sonoma County Transit stops: 5719
+SF MUNI stops: 13880
 
-
-How many zip codes are in San Francisco?
+Find all the SF MUNI stops and save it to CSV
 
 ```
-ogrinfo sfzipcodes.shp -sql "SELECT COUNT(*) FROM sfzipcodes"
+ogr2ogr sf_muni_stops.csv bus_stops_wgs84.shp -sql "SELECT * FROM bus_stops_wgs84 WHERE AGENCY = 'San Francisco MUNI'"
 ```
 
 Find the boundary of zipcode 94109 and save it to GeoJSON
