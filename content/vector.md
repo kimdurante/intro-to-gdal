@@ -31,11 +31,11 @@ Use ```ogrinfo``` to list information about vector data
 
 Let's explore this polygon shapefile of Zip Codes in San Francisco
 
-<img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/zipcodes.png" width="500">
-
 ```
 $ ogrinfo sfzipcodes.shp
 ```
+
+<img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/zipcodes.png" width="500">
 
 ```
 INFO: Open of `sfzipcodes.shp'
