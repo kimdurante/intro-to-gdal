@@ -29,7 +29,7 @@ See a list of available formats
 
 Use ```ogrinfo``` to list information about vector data
 
-#### Shapefiles
+### Shapefiles
 
 Let's explore this polygon shapefile of Zip Codes in San Francisco
 
@@ -105,7 +105,7 @@ OBJECTID: Integer64 (11.0)
 ZIP_CODE: Integer64 (11.0)
 ID: Integer64 (11.0) 
 ```
-#### GeoJSON
+### GeoJSON
 
 Let's explore this GeoJSON file of highways in the San Francisco Bay Area
 
@@ -156,66 +156,70 @@ This outputs a large set of feature information. To view only a summary output, 
 $ ogrinfo -so sfbayhighways.geojson sfbayhighway
 ```
 
-#### Geodatabases
+### Geodatabases
+
+Running ogrinfo on a geodatabase outputs a list of feature layers
 
 ```
-$ ogrinfo SanFranciscoESI.gdb -so birds_polygon
+$ ogrinfo SanFranciscoESI.gdb
 ```
 
 ```
 INFO: Open of `SanFranciscoESI.gdb'
       using driver `OpenFileGDB' successful.
-
-Layer name: birds_polygon
-Geometry: Multi Polygon
-Feature Count: 987
-Extent: (-122.591975, 37.381318) - (-121.780042, 38.246878)
-Layer SRS WKT:
-GEOGCRS["NAD83",
-    DATUM["North American Datum 1983",
-        ELLIPSOID["GRS 1980",6378137,298.257222101,
-            LENGTHUNIT["metre",1]]],
-    PRIMEM["Greenwich",0,
-        ANGLEUNIT["degree",0.0174532925199433]],
-    CS[ellipsoidal,2],
-        AXIS["geodetic latitude (Lat)",north,
-            ORDER[1],
-            ANGLEUNIT["degree",0.0174532925199433]],
-        AXIS["geodetic longitude (Lon)",east,
-            ORDER[2],
-            ANGLEUNIT["degree",0.0174532925199433]],
-    USAGE[
-        SCOPE["Geodesy."],
-        AREA["North America - onshore and offshore: Canada - Alberta; British Columbia; Manitoba; New Brunswick; Newfoundland and Labrador; Northwest Territories; Nova Scotia; Nunavut; Ontario; Prince Edward Island; Quebec; Saskatchewan; Yukon. Puerto Rico. United States (USA) - Alabama; Alaska; Arizona; Arkansas; California; Colorado; Connecticut; Delaware; Florida; Georgia; Hawaii; Idaho; Illinois; Indiana; Iowa; Kansas; Kentucky; Louisiana; Maine; Maryland; Massachusetts; Michigan; Minnesota; Mississippi; Missouri; Montana; Nebraska; Nevada; New Hampshire; New Jersey; New Mexico; New York; North Carolina; North Dakota; Ohio; Oklahoma; Oregon; Pennsylvania; Rhode Island; South Carolina; South Dakota; Tennessee; Texas; Utah; Vermont; Virginia; Washington; West Virginia; Wisconsin; Wyoming. US Virgin Islands.  British Virgin Islands."],
-        BBOX[14.92,167.65,86.46,-47.74]],
-    ID["EPSG",4269]]
-Data axis to CRS axis mapping: 2,1
-FID Column = OBJECTID
-Geometry Column = Shape
-ID: Real (0.0)
-RARNUM: Integer (0.0)
-Shape_Length: Real (0.0)
-Shape_Area: Real (0.0)
+1: breed_dt (None)
+2: soc_dat (None)
+3: sources (None)
+4: biofile (None)
+5: birds_polygon (Multi Polygon)
+6: fish_polygon (Multi Polygon)
+7: fishl_arc (Multi Line String)
+8: habitats_polygon (Multi Polygon)
+9: hydro_annotation_geog (Multi Line String)
+10: hydro_annotation_hydro (Multi Line String)
+11: hydro_annotation_soc (Multi Line String)
+12: index_polygon (Multi Polygon)
+13: invert_polygon (Multi Polygon)
+14: m_mammal_polygon (Multi Polygon)
+15: mgt_polygon (Multi Polygon)
+16: nests (Point)
+17: reptiles_polygon (Multi Polygon)
+18: socecon_arc (Multi Line String)
+19: socecon_point (Point)
+20: t_mammal_polygon (Multi Polygon)
+21: ESIP (Multi Polygon)
+22: esil (Multi Line String)
+23: hydro_polygon (Multi Polygon)
+24: hydrol_arc (Multi Line String)
 
 ```
+
+To view infomration about a specific layer
+
+```
+$ ogrinfo -so SanFranciscoESI.gdb birds_polygon
+```
+
+
 ## Converting Data (ogr2ogr)
 
-Convert a shapefile to a csv
+The `ogr2ogr` utility can be used to convert data between file formats. Use the `-f` flag to specify the output format
+
+### Shapefile to CSV
 
 ```
-$ ogr2ogr -f csv SF/CivicArt.csv SF/CivicArt.shp
+$ ogr2ogr -f csv sfzipcodes.csv sfzipcodes.shp
 ```
 
-Convert a shapefile to GeoJSON
+### Shapefile to GeoJSON
 
 ```
-$ ogr2ogr -f geojson SF/ZipCodes.geojson SF/ZipCodes.shp
+$ ogr2ogr -f geojson sfzipcodes.geojson sfzipcodes.shp
 
 ```
-
 ## Reprojecting Data (ogr2ogr)
 
-Use ```ogr2ogr``` with the target SRS flag (```t_srs```) to reproject vector data. 
+Use ```ogr2ogr``` with the flag (```t_srs```) to reproject data. 
 
 ```ogr2ogr -t_srs (srs, new, old)```
 
