@@ -212,7 +212,7 @@ From one raster
 gdaltindex SF/index_sf1938.shp SF/SF1938.tif
 ```
 
-![Index](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/index_1.jpg)
+![Index](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/index_1.png)
 
 From multiple rasters
 
