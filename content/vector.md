@@ -6,7 +6,7 @@ nav_order: 3
 
 ## Working with Vector Data
 
-[Drivers](#ogr-drivers)
+[Formats and Drivers](#ogr-formats-and-drivers)
 
 [Exploring Data](#exploring-data-ogrinfo)
 
@@ -14,9 +14,9 @@ nav_order: 3
 
 [Reprojecting Data](#reprojecting-data-ogr2ogr)
 
-## OGR Drivers
+## OGR Formats and Drivers
 
-The list of vector drivers currently supported by GDAL can be found here
+The list of vector drivers currently supported by OGR can be found here
 
 [https://gdal.org/drivers/vector/index.html](https://gdal.org/drivers/vector/index.html)
 
@@ -30,6 +30,8 @@ See a list of available formats
 Use ```ogrinfo``` to list information about vector data
 
 Let's look at a shapefile
+
+![San Francisco Zipcodes](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/zipcodes.png)
 
 ```
 $ ogrinfo shapefiles/ZipCodes.shp
