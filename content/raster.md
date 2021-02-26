@@ -43,14 +43,14 @@ You should see a large block of output text, beginning with
 Driver: GTiff/GeoTIFF
 ```
 
-This indicates that the file is a GeoTIFF, which is a special type of TIFF that stores the information necessary to place each pixel in the image on the surface of the Earth. The next lines of text display the filename, and the size (in pixels) of the image.
+This indicates that the file is a GeoTIFF, which is a special type of TIFF that stores the information necessary to place each pixel in the image on the surface of the Earth. The next lines of text display the filename, and the image size (in pixels)
 
 ```
 Files: SF/SF1987.tif
 Size is 6244, 7581
 ```
 
-Below that, you will see some very important information which contains the projection of the data. This is the information that places this image correctly over the city of San Francisco, and specifies the location of each pixel.
+Below that is the projection infomration. This is the information that places this image correctly over the city of San Francisco, and specifies the location of each pixel.
 
 ```
 Coordinate System is:
@@ -81,7 +81,7 @@ PROJCRS["NAD83 / UTM zone 10N",
             LENGTHUNIT["metre",1],
             ID["EPSG",8807]]],
 ```
-The output also contains some generic metadata for the file
+There is also some generic metadata for the file
 ```
 Metadata:
   AGENCY=WESTERN MAPPING CENTER (WMC) oversight agency*
@@ -119,7 +119,7 @@ Metadata:
 
 ```
 
-The last block of output shows the corner points of the image in two different units (meters and minutes, degrees, seconds), as well as some information about each band (also called a channel) in the image. Each channel is byte (8-bit) format, there are three bands (red, green, and blue, respectively). The minimum and maximum values in each band are also displayed.
+The last block of output shows the corner points of the image in two different units (meters and minutes, degrees, seconds), as well as some information about each band (a.k.a. channel). Each channel is byte (8-bit) format, there are three bands (red, green, and blue, respectively).
 
 ```
 Corner Coordinates:
@@ -133,7 +133,7 @@ Band 2 Block=6244x1 Type=Byte, ColorInterp=Green
 Band 3 Block=6244x1 Type=Byte, ColorInterp=Blue
 ```
 
-Use flags ```-norat``` and ```-nomd``` to supress output of metadata and raster attributes
+Use the```-nomd``` flag to supress output of metadata
 
 ```
 $ gdalinfo -norat -nomd SF/SF1987.tif
@@ -180,11 +180,7 @@ Band 1 Block=4800x1 Type=Int16, ColorInterp=Undefined
 ```
 ## Converting Data (gdal_translate)
 
-The gdal_translate utility can be used to convert raster data between different formats, potentially performing some operations like subsettings, resampling, and rescaling pixels in the process
-
-See a list of available formats
-
-```$ gdal_translate --formats```
+The gdal_translate utility can be used to convert raster data between different formats, as well as perform operationssuch as resampling, rescaling, and adding NoData values.
 
 The ```-of``` flag is used to specify the output format. If not specified, the format is guessed from the extension. Use the short format name
 
