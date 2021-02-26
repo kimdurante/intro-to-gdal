@@ -18,6 +18,7 @@ nav_order: 2
 GDAL provides support for a wide-range of raster file formats through the use of drivers which contain specifications and capabilities for handling data
 To view a list of available raster formats, run the following command
 
+
 ```
 $ gdal_translate --formats
 ```
