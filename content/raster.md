@@ -211,6 +211,9 @@ From one raster
 ```
 gdaltindex SF/index_sf1938.shp SF/SF1938.tif
 ```
+
+![SF 1938](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/1938.png)
+
 From multiple rasters
 
 ```
