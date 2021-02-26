@@ -159,11 +159,11 @@ $ ogrinfo -so sfbayhighways.geojson sfbayhighway
 #### Geodatabases
 
 ```
-$ ogrinfo geodatabases/SanFranciscoESI.gdb -so birds_polygon
+$ ogrinfo SanFranciscoESI.gdb -so birds_polygon
 ```
 
 ```
-INFO: Open of `geodatabases/SanFranciscoESI.gdb'
+INFO: Open of `SanFranciscoESI.gdb'
       using driver `OpenFileGDB' successful.
 
 Layer name: birds_polygon
