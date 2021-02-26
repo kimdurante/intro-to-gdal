@@ -15,7 +15,8 @@ nav_order: 2
 
 ## GDAL Formats and Drivers
 <br/>
-GDAL provides support for a wide-range of raster file formats through the use of drivers which contain specifications and capabilities for handling data
+GDAL provides support for a wide-range of raster file formats through the use of drivers which contain specifications and capabilities for handling data.
+
 To view a list of available raster formats, run the following command
 
 
