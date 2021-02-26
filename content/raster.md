@@ -37,7 +37,7 @@ Use `gdalinfo` to list information about raster data. This will output data prop
 Run the following command
 
 ```
-$ gdalinfo SF/SF1987.tif
+$ gdalinfo SF1987.tif
 ```
 
 You should see a large block of output text, beginning with
@@ -49,7 +49,7 @@ Driver: GTiff/GeoTIFF
 This indicates that the file is a GeoTIFF, which is a special type of TIFF that stores the information necessary to place each pixel in the image on the surface of the Earth. The next lines of text display the filename, and the image size (in pixels)
 
 ```
-Files: SF/SF1987.tif
+Files: SF1987.tif
 Size is 6244, 7581
 ```
 
@@ -139,7 +139,7 @@ Band 3 Block=6244x1 Type=Byte, ColorInterp=Blue
 Use the```-nomd``` flag to supress output of metadata
 
 ```
-$ gdalinfo -norat -nomd SF/SF1987.tif
+$ gdalinfo -norat -nomd SF1987.tif
 ```
 
 Let's look at the information for one of the digital elevation models:
@@ -192,19 +192,19 @@ The ```-of``` flag is used to specify the output format. If not specified, the f
 Converting a GeoTIFF to a PNG:
 
 ```
-$ gdal_translate -of png SF/SF1987.tif SF/SF1987_converted.png
+$ gdal_translate -of png SF1987.tif SF1987_converted.png
 ```
 
 Use the creation options flag```-co``` along with ```COMPRESS=JPEG``` output a JPEG compressed GeoTIFF
 ```
-$ gdal_translate -co COMPRESS=JPEG SF/SF1993.tif SF/SF1993_compressed.tif
+$ gdal_translate -co COMPRESS=JPEG SF1993.tif SF1993_compressed.tif
 ```
 ## Warping Data (gdalwarp)
 <br/>
 gdalwarp is a reprojection warping, and image mosaicing utility. It can reproject to any supported projection, and can also apply ground control points stored with the image if the image is “raw” with control information.
 
 ```
-$ gdalwarp -t_srs EPSG:4326 SF/SF1987.tif SF/SF1987_wgs84.tif
+$ gdalwarp -t_srs EPSG:4326 SF1987.tif SF1987_wgs84.tif
 ```
 
 ## Tile Indexing
@@ -214,7 +214,7 @@ Create a shapefile containing a record for each input raster file and a polygon 
 From one raster
 
 ```
-gdaltindex SF/index_sf1938.shp SF/SF1938.tif
+gdaltindex SF/index_sf1938.shp SF1938.tif
 ```
 
 ![Index](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/index_1.png)
@@ -222,5 +222,5 @@ gdaltindex SF/index_sf1938.shp SF/SF1938.tif
 From multiple rasters
 
 ```
-gdaltindex -t_srs EPSG:4326 SF/maps.shp SF/SF1987.tif SF/SF1993.tif SF/california.tif
+gdaltindex -t_srs EPSG:4326 maps.shp SF1987.tif SF1993.tif SF/california.tif
 ```
