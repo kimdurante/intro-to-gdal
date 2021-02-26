@@ -136,7 +136,7 @@ Band 2 Block=6244x1 Type=Byte, ColorInterp=Green
 Band 3 Block=6244x1 Type=Byte, ColorInterp=Blue
 ```
 
-Use the```-nomd``` flag to supress output of metadata
+Use the ```-nomd``` flag to supress output of metadata
 
 ```
 $ gdalinfo -norat -nomd SF1987.tif
