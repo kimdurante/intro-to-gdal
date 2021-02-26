@@ -29,6 +29,8 @@ See a list of available formats
 
 Use ```ogrinfo``` to list information about vector data
 
+#### Shapefiles
+
 Let's explore this polygon shapefile of Zip Codes in San Francisco
 
 ```
@@ -43,10 +45,10 @@ INFO: Open of `sfzipcodes.shp'
 1: sfzipcodes (Polygon)
 ```
 
-Use the summary output flag (```-so```) to display projection, schema, feature count and extent information:
+This produces a brief output showing the filename, driver and layer name. Use the `-al` flag to display all feature information including projection, schema, feature count and extent information:
 
 ```
-$ ogrinfo -so zipcodes.shp sfzipcodes
+$ ogrinfo zipcodes.shp -al
 ```
 
 ```
@@ -101,21 +103,19 @@ PROJCRS["NAD83 / California zone 3 (ftUS)",
 Data axis to CRS axis mapping: 1,2
 OBJECTID: Integer64 (11.0)
 ZIP_CODE: Integer64 (11.0)
-ID: Integer64 (11.0)
+ID: Integer64 (11.0) 
 ```
+#### GeoJSON
 
 Let's explore this GeoJSON file of highways in the San Francisco Bay Area
+
+```
+$ ogrinfo -al sfbayhighways.geojson
+```
 
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/highways.png" width="500">
 
 ```
-$ ogrinfo -so geojson/sfbayhighways.geojson sfbayhighways
-```
-
-```
-INFO: Open of `geojson/sfbayhighways.geojson'
-      using driver `GeoJSON' successful.
-
 Layer name: sfbayhighways
 Geometry: Multi Line String
 Feature Count: 657
@@ -127,34 +127,36 @@ GEOGCRS["WGS 84",
             LENGTHUNIT["metre",1]]],
     PRIMEM["Greenwich",0,
         ANGLEUNIT["degree",0.0174532925199433]],
-    CS[ellipsoidal,2],
-        AXIS["geodetic latitude (Lat)",north,
-            ORDER[1],
-            ANGLEUNIT["degree",0.0174532925199433]],
-        AXIS["geodetic longitude (Lon)",east,
-            ORDER[2],
-            ANGLEUNIT["degree",0.0174532925199433]],
-    ID["EPSG",4326]]
-Data axis to CRS axis mapping: 2,1
-id: String (0.0)
-fnode_: Integer (0.0)
-tnode_: Integer (0.0)
-lpoly_: Integer (0.0)
-rpoly_: Integer (0.0)
-length: Real (0.0)
-st_hwy_dis: Integer (0.0)
-st_hwy_d_1: Real (0.0)
-rte: Integer (0.0)
-status: Integer (0.0)
-funccl: Integer (0.0)
-numlane: String (0.0)
-accont: Integer (0.0)
-rsys: Integer (0.0)
-label: String (0.0)
-bbox: RealList (0.0)
+
+... 
+
+OGRFeature(sfbayhighways):0
+  id (String) = vg822dt4563.1
+  fnode_ (Integer) = 613
+  tnode_ (Integer) = 601
+  lpoly_ (Integer) = 0
+  rpoly_ (Integer) = 0
+  length (Real) = 105.4
+  st_hwy_dis (Integer) = 750
+  st_hwy_d_1 (Real) = 251658240
+  rte (Integer) = 101
+  status (Integer) = 1
+  funccl (Integer) = 2
+  numlane (String) = 04
+  accont (Integer) = 1
+  rsys (Integer) = 2
+  label (String) = US Highway 101
+  bbox (RealList) = (4:-123.03443359,38.82637042,-123.01602059,38.85254315)
+  MULTILINESTRING ((-123.01602059 38.82637042,-123.01647784 38.82724898,-123.01672132 38.8281365,-123.01672387 38.82816808,-123.01683055 38.8295333,-123.0167334 38.83118241,-123.01669658 38.83253404,-123.0166323 38.8335659,-123.01689025 38.83448499,-123.01720761 38.835287,-123.01755626 38.83574654,-123.01813823 38.83627363,-123.01909952 38.83703489,-123.01994394 38.83770158,-123.02151857 38.83867007,-123.02282953 38.83968357,-123.02495927 38.84076909,-123.02662085 38.84185462,-123.02821978 38.84376009,-123.02961333 38.84573775,-123.03080303 38.84752625,-123.03246059 38.84941369,-123.0334488 38.85062992,-123.03437757 38.85205797,-123.03443359 38.85253553,-123.03443352 38.85254315))
+  
+```
+This outputs a large set of feature information. To view only a summary output, use the `-so` flag and supply the layer name
+
+```
+$ ogrinfo -so sfbayhighways.geojson sfbayhighway
 ```
 
-Geodatabases
+#### Geodatabases
 
 ```
 $ ogrinfo geodatabases/SanFranciscoESI.gdb -so birds_polygon
