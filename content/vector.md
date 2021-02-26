@@ -215,12 +215,11 @@ $ ogr2ogr -f csv sfzipcodes.csv sfzipcodes.shp
 
 ```
 $ ogr2ogr -f geojson sfzipcodes.geojson sfzipcodes.shp
-
 ```
 ## Reprojecting Data (ogr2ogr)
 
-Use ```ogr2ogr``` with the flag (```t_srs```) to reproject data. 
+Use ```ogr2ogr``` reproject data. Use the `t_srs` to specify the target spatial reference system (projection)
 
-```ogr2ogr -t_srs (srs, new, old)```
-
-```ogr2ogr -t_srs EPSG:4326 SF/bus_stops_wgs84.shp SF/Bus_Stops.shp```
+```
+$ ogr2ogr -t_srs EPSG:4326 bus_stops_wgs84.shp Bus_Stops.shp
+```
