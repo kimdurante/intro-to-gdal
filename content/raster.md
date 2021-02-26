@@ -151,7 +151,6 @@ $ gdalinfo -norat -nomd SF1987.tif
 Let's look at the information for one of the digital elevation models:
 
 ![DEM](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/dem.png)
-
 ```
 $ gdalinfo DEM/gt30w140n40_dem/gt30w140n40.dem
 
