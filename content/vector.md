@@ -29,54 +29,79 @@ See a list of available formats
 
 Use ```ogrinfo``` to list information about vector data
 
-Let's look at a shapefile
+Let's look at a polygon shapefile of Zip Codes in San Francisco
 
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/zipcodes.png" width="500">
 
 ```
-$ ogrinfo shapefiles/ZipCodes.shp
+$ ogrinfo zipcodes.shp
 ```
 
 ```
-INFO: Open of `shapefiles/ZipCodes.shp'
+INFO: Open of `zipcodes.shp'
       using driver `ESRI Shapefile' successful.
-1: ZipCodes (Polygon)
+1: zipcodes (Polygon)
 ```
 
 Use the summary output flag (```-so```) to display projection, schema, feature count and extent information:
 
 ```
-$ ogrinfo -so shapefiles/ZipCodes.shp ZipCodes
+$ ogrinfo -so zipcodes.shp sfzipcodes
 ```
 
 ```
-Layer name: ZipCodes
+Layer name: sfzipcodes
 Metadata:
-  DBF_DATE_LAST_UPDATE=1920-02-14
+  DBF_DATE_LAST_UPDATE=2005-07-08
 Geometry: Polygon
-Feature Count: 187
-Extent: (-122.804417, 37.252190) - (-121.403842, 38.864245)
+Feature Count: 25
+Extent: (5979385.499980, 2085840.500090) - (6024664.500080, 2123808.749990)
 Layer SRS WKT:
-GEOGCRS["WGS84(DD)",
-    DATUM["WGS84",
-        ELLIPSOID["WGS84",6378137,298.257223563,
-            LENGTHUNIT["metre",1,
-                ID["EPSG",9001]]]],
-    PRIMEM["Greenwich",0,
-        ANGLEUNIT["degree",0.0174532925199433]],
-    CS[ellipsoidal,2],
-        AXIS["geodetic longitude",east,
-            ORDER[1],
+PROJCRS["NAD83 / California zone 3 (ftUS)",
+    BASEGEOGCRS["NAD83",
+        DATUM["North American Datum 1983",
+            ELLIPSOID["GRS 1980",6378137,298.257222101,
+                LENGTHUNIT["metre",1]]],
+        PRIMEM["Greenwich",0,
             ANGLEUNIT["degree",0.0174532925199433]],
-        AXIS["geodetic latitude",north,
+        ID["EPSG",4269]],
+    CONVERSION["SPCS83 California zone 3 (US Survey feet)",
+        METHOD["Lambert Conic Conformal (2SP)",
+            ID["EPSG",9802]],
+        PARAMETER["Latitude of false origin",36.5,
+            ANGLEUNIT["degree",0.0174532925199433],
+            ID["EPSG",8821]],
+        PARAMETER["Longitude of false origin",-120.5,
+            ANGLEUNIT["degree",0.0174532925199433],
+            ID["EPSG",8822]],
+        PARAMETER["Latitude of 1st standard parallel",38.4333333333333,
+            ANGLEUNIT["degree",0.0174532925199433],
+            ID["EPSG",8823]],
+        PARAMETER["Latitude of 2nd standard parallel",37.0666666666667,
+            ANGLEUNIT["degree",0.0174532925199433],
+            ID["EPSG",8824]],
+        PARAMETER["Easting at false origin",6561666.667,
+            LENGTHUNIT["US survey foot",0.304800609601219],
+            ID["EPSG",8826]],
+        PARAMETER["Northing at false origin",1640416.667,
+            LENGTHUNIT["US survey foot",0.304800609601219],
+            ID["EPSG",8827]]],
+    CS[Cartesian,2],
+        AXIS["easting (X)",east,
+            ORDER[1],
+            LENGTHUNIT["US survey foot",0.304800609601219]],
+        AXIS["northing (Y)",north,
             ORDER[2],
-            ANGLEUNIT["degree",0.0174532925199433]]]
+            LENGTHUNIT["US survey foot",0.304800609601219]],
+    USAGE[
+        SCOPE["Engineering survey, topographic mapping."],
+        AREA["United States (USA) - California - counties Alameda; Calaveras; Contra Costa; Madera; Marin; Mariposa; Merced; Mono; San Francisco; San Joaquin; San Mateo; Santa Clara; Santa Cruz; Stanislaus; Tuolumne."],
+        BBOX[36.73,-123.02,38.71,-117.83]],
+    ID["EPSG",2227]]
 Data axis to CRS axis mapping: 1,2
-area: Real (33.31)
-length: Real (33.31)
-po_name: String (254.0)
-state: String (254.0)
-zip: String (254.0)
+OBJECTID: Integer64 (11.0)
+ZIP_CODE: Integer64 (11.0)
+ID: Integer64 (11.0)
 ```
 
 Let's explore a GeoJSON file
