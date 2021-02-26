@@ -36,7 +36,7 @@ Use `gdalinfo` to list information about raster data. This will output data prop
 
 Let's explore the 1987 San Francisco Quadrangle 
 
-![San Francisco 1987](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/SF1987.png)
+<img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/SF1987.png" width="500">
 
 Run the following command
 
@@ -148,7 +148,7 @@ $ gdalinfo -norat -nomd SF1987.tif
 
 ### Digital Elevation Models
 
-Let's look at the information this digital elevation models
+Let's look at the information for this digital elevation model
 
 ![DEM](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/dem.png)
 
