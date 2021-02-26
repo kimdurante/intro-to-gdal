@@ -32,6 +32,10 @@ The list of raster drivers currently supported by GDAL can be found here
 <br/>
 Use `gdalinfo` to list information about raster data. This will output data properties including file format, projection, extent, metadata, and raster band information
 
+### GeoTIFF
+
+Let's explore the 1987 San Francisco Quadrangle 
+
 ![San Francisco 1987](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/SF1987.png)
 
 Run the following command
@@ -141,6 +145,8 @@ Use the ```-nomd``` flag to supress output of metadata
 ```
 $ gdalinfo -norat -nomd SF1987.tif
 ```
+
+### Digital Elevation Models
 
 Let's look at the information for one of the digital elevation models:
 
