@@ -15,6 +15,7 @@ nav_order: 3
 [Reprojecting Data](#reprojecting-data-ogr2ogr)
 
 ## OGR Formats and Drivers
+<br/>
 
 The list of vector drivers currently supported by OGR can be found here
 
@@ -26,11 +27,12 @@ See a list of available formats
 
 
 ## Exploring Data (ogrinfo)
+<br/>
 
 Use ```ogrinfo``` to list information about vector data
 
 ### Shapefiles
-
+<br/>
 Let's explore this polygon shapefile of Zip Codes in San Francisco
 
 ```
@@ -106,6 +108,7 @@ ZIP_CODE: Integer64 (11.0)
 ID: Integer64 (11.0) 
 ```
 ### GeoJSON
+<br/>
 
 Let's explore this GeoJSON file of highways in the San Francisco Bay Area
 
@@ -157,6 +160,7 @@ $ ogrinfo -so sfbayhighways.geojson sfbayhighway
 ```
 
 ### Geodatabases
+<br/>
 
 Running ogrinfo on a geodatabase outputs a list of feature layers
 
@@ -202,30 +206,35 @@ $ ogrinfo -so SanFranciscoESI.gdb birds_polygon
 
 
 ## Converting Data (ogr2ogr)
+<br/>
 
 The `ogr2ogr` utility can be used to convert data between file formats. Use the `-f` flag to specify the output format
 
-### Shapefile to CSV
+### Creating a CSV from a Shapefile
+<br/>
 
 ```
 $ ogr2ogr -f csv sfzipcodes.csv sfzipcodes.shp
 ```
 
-### Shapefile to GeoJSON
+### Creating GeoJSON from a Shapefile
+<br/>
 
 ```
 $ ogr2ogr -f geojson sfzipcodes.geojson sfzipcodes.shp
 ```
 ## Reprojecting Data (ogr2ogr)
+<br/>
 
 Use ```ogr2ogr``` reproject data. Use the `t_srs` flag to specify the target spatial reference system (projection)
 
-### Reproject data from EPSG:26910 to EPSG:4326
+### Reprojecting data from EPSG:26910 to EPSG:4326
+<br/>
 ```
 $ ogr2ogr -t_srs EPSG:4326 bus_stops_wgs84.shp Bus_Stops.shp
 ```
 
-### Reproject data from EPSG:26910 to EPSG:4326 and convert to GeoJSON
+### Reprojecting data and converting to GeoJSON
 
 ```
 ogr2ogr -t_srs EPSG:4326 -f geojson bus_stops_wgs84.geojson Bus_Stops.shp
