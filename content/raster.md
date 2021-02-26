@@ -201,3 +201,18 @@ gdalwarp is a reprojection warping, and image mosaicing utility. It can reprojec
 ```
 $ gdalwarp -t_srs EPSG:4326 SF/SF1987.tif SF/SF1987_wgs84.tif
 ```
+
+## Tile Indexing
+
+Create a shapefile containing a record for each input raster file and a polygon geometry outlining the extent
+
+From one raster
+
+```
+gdaltindex SF/index_sf1938.shp SF/SF1938.tif
+```
+From multiple rasters
+
+```
+gdaltindex -t_srs EPSG:4326 SF/maps.shp SF/SF1987.tif SF/SF1993.tif SF/california.tif
+```
