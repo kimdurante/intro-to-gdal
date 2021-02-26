@@ -16,13 +16,13 @@ $ ogrinfo bus_stops_wgs84.shp -sql "SELECT COUNT(*) FROM bus_stops_wgs84"
 ```
 
 ```
-Layer name: Bus_Stops
+Layer name: bus_stops_wgs84
 Geometry: None
 Feature Count: 1
 Layer SRS WKT:
 (unknown)
 COUNT_*: Integer (0.0)
-OGRFeature(Bus_Stops):0
+OGRFeature(bus_stops_wgs84):0
   COUNT_* (Integer) = 79810
 ```
 
@@ -33,6 +33,19 @@ Find the number of stops serviced by Sonoma County Transit
 ```
 $ ogrinfo -q bus_stops_wgs84.shp -sql "SELECT COUNT(*) FROM bus_stops_wgs84 WHERE AGENCY = 'Sonoma County Transit'"
 ```
+
+```
+Layer name: bus_stops_wgs84
+Geometry: None
+Feature Count: 1
+Layer SRS WKT:
+(unknown)
+COUNT_*: Integer (0.0)
+OGRFeature(bus_stops_wgs84):0
+  COUNT_* (Integer) = 5719
+```
+
+Sonoma County Transit stops: 5719
 
 How many unique bus stops are contained in this layer
 ```
