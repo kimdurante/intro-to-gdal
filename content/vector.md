@@ -31,7 +31,7 @@ Use ```ogrinfo``` to list information about vector data
 
 Let's look at a shapefile
 
-![San Francisco Zipcodes](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/zipcodes.png=250x250)
+![San Francisco Zipcodes](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/zipcodes.png | width=100)
 
 ```
 $ ogrinfo shapefiles/ZipCodes.shp
