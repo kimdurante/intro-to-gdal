@@ -16,7 +16,6 @@ nav_order: 2
 ## GDAL Formats and Drivers
 <br/>
 GDAL provides support for a wide-range of raster file formats through the use of drivers which contain specifications and capabilities for handling data
-
 To view a list of available raster formats, run the following command
 
 ```
@@ -29,7 +28,7 @@ The list of raster drivers currently supported by GDAL can be found here
 
 ## Exploring Data (gdalinfo)
 <br/>
-Use ```gdalinfo``` to list information about raster data. This will output data properties including file format, projection, extent, metadata, and raster band information
+Use `gdalinfo` to list information about raster data. This will output data properties including file format, projection, extent, metadata, and raster band information
 
 ![San Francisco 1987](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/SF1987.png)
 
