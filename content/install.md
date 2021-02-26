@@ -8,8 +8,7 @@ nav_order: 1
 
 
 ### On a Mac
-
-
+<br/>
 
 Download the GDAL Complete framework appropriate for your operating system here
 
@@ -34,6 +33,7 @@ $ gdalinfo --version
 ```
 
 ### On Windows
+<br/>
 
 
 
