@@ -153,7 +153,7 @@ Let's look at the information for this digital elevation model
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/dem.png" width="500">
 
 ```
-$ gdalinfo DEM/gt30w140n40_dem/gt30w140n40.dem
+$ gdalinfo gt30w140n40_dem/gt30w140n40.dem
 ```
 
 ```
@@ -219,7 +219,7 @@ Create a shapefile containing a record for each input raster file and a polygon 
 From one raster
 
 ```
-gdaltindex SF/index_sf1938.shp SF1938.tif
+gdaltindex index_sf1938.shp SF1938.tif
 ```
 
 ![Index](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/index_1.png)
@@ -227,5 +227,5 @@ gdaltindex SF/index_sf1938.shp SF1938.tif
 From multiple rasters
 
 ```
-gdaltindex -t_srs EPSG:4326 maps.shp SF1987.tif SF1993.tif SF/california.tif
+gdaltindex -t_srs EPSG:4326 maps.shp SF1987.tif SF1993.tif california.tif
 ```
