@@ -24,7 +24,7 @@ $ gdalwarp -cutline sf_94109.geojson -dstalpha -crop_to_cutline SF1987_wgs84.tif
 
 Clipping Data by coordinates
 ```
-gdal_translate -projwin -121.852 39.593 -119.119 37.675 -of USGSDEM DEM/gt30w140n40_dem/gt30w140n40.dem DEM/gt30w140n40_clipped.dem
+gdal_translate -projwin -121.852 39.593 -119.119 37.675 -of USGSDEM gt30w140n40_dem/gt30w140n40.dem gt30w140n40_clipped.dem
 ```
 
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/dem_clip.png" width="500">
