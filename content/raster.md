@@ -212,6 +212,8 @@ gdalwarp is a reprojection warping, and image mosaicing utility. It can reprojec
 $ gdalwarp -t_srs EPSG:4326 SF1987.tif SF1987_wgs84.tif
 ```
 
+<img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/SF1987_wgs.png" width="500">
+
 ## Tile Indexing
 <br/>
 Create a shapefile containing a record for each input raster file and a polygon geometry outlining the extent
