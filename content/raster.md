@@ -216,6 +216,11 @@ $ gdalwarp -t_srs EPSG:4326 SF1987.tif SF1987_wgs84.tif
 
 This output contains a black border around the image which in this case isn't too noticeable. 
 
+<p float="left">
+  <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/SF1987_4326.png" width="100" />
+  <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/border.png" width="100" /> 
+</p>
+
 ## Tile Indexing
 <br/>
 Create a shapefile containing a record for each input raster file and a polygon geometry outlining the extent
