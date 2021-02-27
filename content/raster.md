@@ -51,14 +51,14 @@ You should see a large block of output text, beginning with
 Driver: GTiff/GeoTIFF
 ```
 
-This indicates that the file is a GeoTIFF, which is a special type of TIFF that stores the information necessary to place each pixel in the image on the surface of the Earth. The next lines of text display the filename, and the image size (in pixels)
+This shows that the file is a GeoTIFF. The next lines of text display the filename, and the image size (in pixels)
 
 ```
 Files: SF1987.tif
 Size is 6244, 7581
 ```
 
-Below that is the projection information. This is the information that places this image correctly over the city of San Francisco, and specifies the location of each pixel.
+Below that is the projection information. This is the information that places this image correctly over the northeast section of San Francisco, and specifies the location of each pixel.
 
 ```
 Coordinate System is:
@@ -144,7 +144,7 @@ Band 3 Block=6244x1 Type=Byte, ColorInterp=Blue
 Use the ```-nomd``` flag to supress output of metadata
 
 ```
-$ gdalinfo -norat -nomd SF1987.tif
+$ gdalinfo -nomd SF1987.tif
 ```
 
 ### Digital Elevation Models
