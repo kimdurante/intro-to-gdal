@@ -19,7 +19,7 @@ Clipping file to a boundary, adding alpha channel, and cropping to extent
 $ gdalwarp -cutline sf_94109.geojson -dstalpha -crop_to_cutline SF1987_wgs84.tif SF1987_wgs84_a.tif
 ```
 
-<img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/94109_crop_alpha.png" width="500">
+<img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/94109_alpha_crop.png" width="500">
 IMAGE
 
 Clipping Data by coordinates
