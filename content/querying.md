@@ -30,7 +30,7 @@ Total number of stops: 79810
 
 How many unique stops are contained in this layer?
 ```
-ogrinfo bus_stops_wgs84.shp -sql "SELECT COUNT(DISTINCT STOPID) FROM bus_stops_wgs84"
+$ ogrinfo bus_stops_wgs84.shp -sql "SELECT COUNT(DISTINCT STOPID) FROM bus_stops_wgs84"
 ```
 
 Total unique stops: 23954
