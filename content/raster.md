@@ -200,7 +200,7 @@ Converting a GeoTIFF to a PNG:
 $ gdal_translate -of png SF1987.tif SF1987_converted.png
 ```
 
-Use the creation options flag```-co``` along with ```COMPRESS=JPEG``` output a JPEG compressed GeoTIFF
+Use the creation options flag ```-co``` along with ```COMPRESS=JPEG``` output a JPEG compressed GeoTIFF
 ```
 $ gdal_translate -co COMPRESS=JPEG SF1993.tif SF1993_compressed.tif
 ```
