@@ -34,10 +34,12 @@ Use `gdalinfo` to list information about raster data. This will output data prop
 
 ### GeoTIFFs
 
-Let's explore the 1987 San Francisco Quadrangle 
+Let's explore this 1987 aerial photograph of San Francisco
 
+<p>
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/SF1987.png" width="500">
-
+<em>San Francisco North Quadrangle</em>    
+</p>
 Run the following command
 
 ```
