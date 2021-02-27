@@ -9,7 +9,7 @@ nav_order: 6
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/mosaic.png" width="500">
 
 ```
-for file in DOQQ/*/*.tif*; do echo "$file" >> doqq.txt; done
+for file in DOQQ/*/*.tif*; do echo "$file" >> DOQQ/doqq.txt; done
 ```
 
 ```
