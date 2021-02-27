@@ -6,13 +6,10 @@ nav_order: 3
 
 ## Working with Vector Data
 
-[Formats and Drivers](#ogr-formats-and-drivers)
-
-[Exploring Data](#exploring-data-ogrinfo)
-
-[Converting Data](#converting-data-ogr2ogr)
-
-[Reprojecting Data](#reprojecting-data-ogr2ogr)
+* [Formats and Drivers](#ogr-formats-and-drivers)
+* [Exploring Data](#exploring-data-ogrinfo)
+* [Converting Data](#converting-data-ogr2ogr)
+* [Reprojecting Data](#reprojecting-data-ogr2ogr)
 
 ## OGR Formats and Drivers
 <br/>
