@@ -25,3 +25,9 @@ gdalwarp -t_srs EPSG:4326 -dstnodata 0 -co COMPRESS=JPEG  -of gtiff DOQQ/doqqs_m
 ```
 
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/mosaiced.png" width="500">
+
+## Creating a Raster Tile Index
+
+```
+gdaltindex -t_srs EPSG:4326 DOQQ/index.shp DOQQ/*/*.tif 
+```
