@@ -226,7 +226,7 @@ $ gdalwarp -t_srs EPSG:4326 -dstalpha SF1987.tif SF1987_wgs84.tif
 Run `gdalinfo` on the output to see the information
 
 ```
-$ gdalinfo SF1987_wgs84a.tif
+$ gdalinfo SF1987_wgs84.tif
 ```
 
 A 4th "Alpha" band has been added
