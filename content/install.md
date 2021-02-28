@@ -41,7 +41,7 @@ Use the OSGEO4W Installer to download & install GDAL
 
 [https://trac.osgeo.org/osgeo4w](https://trac.osgeo.org/osgeo4w)
 
-Once installation is complete, you'll use the OSGeo4W Shell to access GDAL. This shell is automatically installed when following the instructions above. 
+You will use the OSGeo4W Shell to access GDAL. This shell is automatically installed when following the instructions above. 
 
 Verify that the installation was successful by opening the OSGeo4W Shell and running the following command
 
