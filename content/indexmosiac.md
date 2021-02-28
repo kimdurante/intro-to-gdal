@@ -4,6 +4,24 @@ title: Mosaicing
 nav_order: 6
 ---
 
+## Indexing Raster Tiles
+<br/>
+Create a polygon boundary containing attributes for each input file and a polygon geometry outlining the extent
+
+From one raster
+
+```
+gdaltindex SF1987_index.geojson SF1987.tif
+```
+
+![Index](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/index_1.png)
+
+From multiple rasters
+
+```
+gdaltindex -t_srs EPSG:4326 maps.shp SF1987.tif SF1993.tif california.tif
+```
+
 ## Creating a Mosaic
 
 Merging several raster files
