@@ -19,12 +19,16 @@ gdaltindex SF1987_index.geojson SF1987.tif
 From multiple rasters
 
 ```
-gdaltindex -t_srs EPSG:4326 maps.shp SF1987.tif SF1993.tif california.tif
+gdaltindex -t_srs EPSG:4326 
+```
+
+```
+$ gdaltindex -t_srs EPSG:4326 DOQQ/index.shp DOQQ/*/*.tif 
 ```
 
 ## Creating a Mosaic
 
-Merging several raster files
+Mosaicing raster tiles of all the files and then an overview image
 
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/mosaic.png" width="500">
 
@@ -32,7 +36,7 @@ Create an input list of DOQQs
 ```
 $ for file in DOQQ/*/*.tif*; do echo "$file" >> DOQQ/doqqs.txt; done
 ```
-VRT (Virtual Dataset)  is a mosaic of the list of input GDAL-supported rasters. With a mosaic you can merge several raster files. 
+VRT (Virtual Dataset) is an XML file, similar to a tile index, that references all the files holding the extent, projection, etc without any processing or translation of the files.
 ```
 $ gdalbuildvrt -input_file_list DOQQ/doqqs.txt DOQQ/doqqs_merged.vrt 
 ```
@@ -46,6 +50,3 @@ gdalwarp -t_srs EPSG:4326 -dstnodata 0 -co COMPRESS=JPEG  -of gtiff DOQQ/doqqs_m
 
 ## Creating a Raster Tile Index
 
-```
-gdaltindex -t_srs EPSG:4326 DOQQ/index.shp DOQQ/*/*.tif 
-```
