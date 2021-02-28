@@ -237,21 +237,3 @@ Band 3 Block=7137x1 Type=Byte, ColorInterp=Blue
   Mask Flags: PER_DATASET ALPHA 
 Band 4 Block=7137x1 Type=Byte, ColorInterp=Alpha
 ```
-
-## Tile Indexing
-<br/>
-Create a shapefile containing a record for each input raster file and a polygon geometry outlining the extent
-
-From one raster
-
-```
-gdaltindex index_sf1938.shp SF1938.tif
-```
-
-![Index](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/index_1.png)
-
-From multiple rasters
-
-```
-gdaltindex -t_srs EPSG:4326 maps.shp SF1987.tif SF1993.tif california.tif
-```
