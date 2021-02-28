@@ -32,11 +32,11 @@ Use ```ogrinfo``` to list information about vector data
 <br/>
 Let's explore this polygon shapefile of Zip Codes in San Francisco
 
+<img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/zipcodes.png" width="500">
+
 ```
 $ ogrinfo sfzipcodes.shp
 ```
-
-<img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/zipcodes.png" width="500">
 
 ```
 INFO: Open of `sfzipcodes.shp'
@@ -109,11 +109,11 @@ ID: Integer64 (11.0)
 
 Let's explore this GeoJSON file of highways in the San Francisco Bay Area
 
+<img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/highways.png" width="500">
+
 ```
 $ ogrinfo -al sfbayhighways.geojson
 ```
-
-<img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/highways.png" width="500">
 
 ```
 Layer name: sfbayhighways
@@ -153,13 +153,13 @@ OGRFeature(sfbayhighways):0
 This outputs a large set of feature information. To view only a summary output, use the `-so` flag and supply the layer name
 
 ```
-$ ogrinfo -so sfbayhighways.geojson sfbayhighway
+$ ogrinfo -so sfbayhighways.geojson sfbayhighways
 ```
 
 ### Geodatabases
 <br/>
 
-Running ogrinfo on a geodatabase outputs a list of feature layers
+Running `ogrinfo` on a geodatabase outputs a list of feature layers
 
 ```
 $ ogrinfo SanFranciscoESI.gdb
@@ -201,24 +201,29 @@ To view infomration about a specific layer
 $ ogrinfo -so SanFranciscoESI.gdb birds_polygon
 ```
 
-
 ## Converting Data (ogr2ogr)
 <br/>
 
-The `ogr2ogr` utility can be used to convert data between file formats. Use the `-f` flag to specify the output format
+The `ogr2ogr` utility can be used to convert data between file formats. Use the `-f` flag to specify the output format. If no format is specified, OGR will guess from the file extension provided
+
+### Creating GeoJSON from one layer of a Geodatabase
+
+```
+$ ogr2ogr -f geojson birds.geojson SanFranciscoESI.gdb birds_polygon
+```
 
 ### Creating a CSV from a Shapefile
 <br/>
 
 ```
-$ ogr2ogr -f csv sfzipcodes.csv sfzipcodes.shp
+$ ogr2ogr -f csv CivicArt.csv CivicArt.shp
 ```
 
 ### Creating GeoJSON from a Shapefile
 <br/>
 
 ```
-$ ogr2ogr -f geojson sfzipcodes.geojson sfzipcodes.shp
+$ ogr2ogr -f geojson sfzipcodes.shp sfzipcodes.shp
 ```
 ## Reprojecting Data (ogr2ogr)
 <br/>
