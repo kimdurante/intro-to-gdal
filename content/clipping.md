@@ -21,7 +21,8 @@ $ gdal_translate -projwin -121.852 39.593 -119.119 37.675 gt30w140n40_dem/gt30w1
 
 ### Clipping by Vector
 
-Clipping _SF1987_wgs84a.tif_ to the boundary of _sf_94109.geojson_
+Clip _SF1987_wgs84.tif_ to the 94109 boundary by using `-cutline`
+
 ```
 $ gdalwarp -cutline sf_94109.geojson SF1987_wgs84.tif SF1987_wgs84_clipped.tif
 ```
