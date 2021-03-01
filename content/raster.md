@@ -231,7 +231,8 @@ Run `gdalinfo` on the output to see the information
 $ gdalinfo SF1987_wgs84.tif
 ```
 
-A 4th "Alpha" band has been added
+A 4th band (Alpha) has been added
+
 ```
 Band 1 Block=7137x1 Type=Byte, ColorInterp=Red
   Mask Flags: PER_DATASET ALPHA 
