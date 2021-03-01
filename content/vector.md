@@ -248,11 +248,13 @@ ogr2ogr -t_srs EPSG:4326 -f geojson bus_stops_wgs84.geojson Bus_Stops.shp
 Performing the same operation on multiple vector files
 
 Convert shapefiles to GeoJSON
-geojson.sh
+
 ```
 sh shp2geojson.sh
 ```
 
-Convert GeoJSON to EPSG:4326
+Convert all shapefiles in a directory to EPSG:4326
 
-
+```
+sh shp2wgs84.sh
+```
