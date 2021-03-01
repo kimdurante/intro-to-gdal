@@ -6,6 +6,10 @@ nav_order: 7
 
 ## Digital Elevation Models
 
+The `gdaldem` utility can be used to analyze and visualize DEMs. 
+
+<img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/dem_clip.png" width="500">
+
 ### Hillshade
 
 ```
