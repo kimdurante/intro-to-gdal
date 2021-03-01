@@ -194,7 +194,7 @@ INFO: Open of `SanFranciscoESI.gdb'
 
 ```
 
-To view infomration about a specific layer
+To view information about a specific layer
 
 ```
 $ ogrinfo -so SanFranciscoESI.gdb birds_polygon
