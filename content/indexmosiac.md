@@ -14,7 +14,7 @@ From one raster
 $ gdaltindex SF1987_index.geojson SF1987.tif
 ```
 
-![Index](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/single_index.png)
+![Index of one raster file](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/single_index.png)
 
 From multiple rasters in a directory
 
@@ -22,6 +22,7 @@ From multiple rasters in a directory
 $ gdaltindex -t_srs EPSG:4326 DOQQ/index.shp DOQQ/*/*.tif 
 ```
 
+![Index of multiple raster files](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/index.png)
 ## Creating a Mosaic
 
 Mosaicing raster tiles of all the files and then an overview image
