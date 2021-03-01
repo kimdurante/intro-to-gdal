@@ -18,7 +18,6 @@ Download the zip file of workshop data
 <details>
 <summary>Summary of files included in the workshop data</summary>
 <br>
-This is the hidden dropdown content.
 
 GeoTIFFs
 - SF1987.tif
