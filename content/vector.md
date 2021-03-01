@@ -202,22 +202,26 @@ $ ogrinfo -so SanFranciscoESI.gdb birds_polygon
 
 ## Converting Data (ogr2ogr)
 <br/>
+
 The `ogr2ogr` utility can be used to convert data between file formats. Use the `-f` flag to specify the output format. If no format is specified, OGR will guess from the file extension provided
 
 ### Creating GeoJSON from one layer of a Geodatabase
 <br/>
+
 ```
 $ ogr2ogr -f geojson birds.geojson SanFranciscoESI.gdb birds_polygon
 ```
 
 ### Creating a CSV from a Shapefile
 <br/>
+
 ```
 $ ogr2ogr -f csv CivicArt.csv CivicArt.shp
 ```
 
 ### Creating GeoJSON from a Shapefile
 <br/>
+
 ```
 $ ogr2ogr -f geojson sfzipcodes.geojson sfzipcodes.shp
 ```
@@ -228,12 +232,14 @@ Use ```ogr2ogr``` reproject data. Use the `t_srs` flag to specify the target spa
 
 ### Reprojecting data from EPSG:26910 to EPSG:4326
 <br/>
+
 ```
 $ ogr2ogr -t_srs EPSG:4326 bus_stops_wgs84.shp Bus_Stops.shp
 ```
 
 ### Reprojecting data and converting to GeoJSON
 <br/>
+
 ```
 $ ogr2ogr -t_srs EPSG:4326 -f geojson bus_stops_wgs84.geojson Bus_Stops.shp
 ```
