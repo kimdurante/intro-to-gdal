@@ -12,6 +12,7 @@ nav_order: 2
 * [Exploring Data](#exploring-data-gdalinfo)
 * [Converting Data](#converting-data-gdal_translate)
 * [Warping Data](#warping-data-gdalwarp)
+* [Batch Processing](#batch-processing)
 
 ## GDAL Formats and Drivers
 <br/>
@@ -238,4 +239,30 @@ Band 2 Block=7137x1 Type=Byte, ColorInterp=Green
 Band 3 Block=7137x1 Type=Byte, ColorInterp=Blue
   Mask Flags: PER_DATASET ALPHA 
 Band 4 Block=7137x1 Type=Byte, ColorInterp=Alpha
+```
+
+### Batch Processing
+
+```
+$ python reprojectTiffs.py
+```
+
+```
+import os
+import fnmatch
+
+INPUT_FOLDER="SFMAPS"
+OUTPUT_FOLDER= "wgs84"
+
+def findRasters (path, filter):
+    for root, dirs, files in os.walk(path):
+        for file in fnmatch.filter(files, filter):
+            yield file
+
+for raster in findRasters(INPUT_FOLDER, '*.tif'):
+    newFile = raster[:-4]
+    inRaster = INPUT_FOLDER + '/' + raster
+    outRaster = OUTPUT_FOLDER +'/' + newFile + '_wgs84.tif'
+    cmd = 'gdalwarp -t_srs EPSG:4326 -te xmin ymin xmax ymax -dstalpha %s %s' % (inRaster, outRaster)
+    os.system(cmd)
 ```
