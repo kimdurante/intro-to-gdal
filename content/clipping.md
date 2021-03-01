@@ -30,8 +30,9 @@ $ gdalwarp -cutline sf_94109.geojson SF1987_wgs84.tif SF1987_wgs84_clipped.tif
 ```
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/94109_alpha_c.png" width="500">
 
-### Batch Processing
+## Batch Processing
 
+Clip multiple GeoTIFFs to a polygon boundary
 ```
 import os
 import fnmatch
