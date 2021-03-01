@@ -228,7 +228,7 @@ $ gdalwarp -t_srs EPSG:4326 SF1987.tif SF1987_wgs84.tif
 This transformed file contains a black border around the image. This is because the original image did not contain a NoData value, so when the new file is created, black pixels fill in the extent area outside of the image. The simplest way to remedy this is to add a transparency band (alpha channel) to the output file using the `-dstalpha` flag
 
 ```
-$ gdalwarp -t_srs EPSG:4326 -dstalpha SF1987.tif SF1987_wgs84.tif
+$ gdalwarp -t_srs EPSG:4326 -dstalpha -overwrite SF1987.tif SF1987_wgs84.tif
 ```
 
 Run `gdalinfo` on the output to see the information
