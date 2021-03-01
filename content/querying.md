@@ -39,6 +39,7 @@ ___
 
 Q: How many unique stops are contained in this layer?
 
+
 ```
 $ ogrinfo bus_stops_wgs84.shp -sql "SELECT COUNT(DISTINCT STOPID) FROM bus_stops_wgs84"
 ```
