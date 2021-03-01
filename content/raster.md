@@ -204,6 +204,13 @@ Use the creation options flag ```-co``` along with ```COMPRESS=JPEG``` output a 
 ```
 $ gdal_translate -co COMPRESS=JPEG SF1993.tif SF1993_compressed.tif
 ```
+
+Rescaling data
+
+```
+gdal_translate -scale 10 1500 0 255 -co COMPRESS=JPEG SF1993.tif SF1993_rescaled.tif
+```
+
 ## Warping Data (gdalwarp)
 <br/>
 gdalwarp is a reprojection warping, and image mosaicing utility. It can reproject to any supported projection, and can also apply ground control points stored with the image if the image is “raw” with control information.
