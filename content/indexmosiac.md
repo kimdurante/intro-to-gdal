@@ -6,9 +6,9 @@ nav_order: 6
 
 ## Indexing Raster Tiles
 <br/>
-Create a polygon boundary containing attributes for each input file and a polygon geometry outlining the extent
+The `gdaltindex` utility creates a polygon boundary containing features for each input file and a polygon geometry outlining the extent.
 
-From one raster
+To create an index from one raster file
 
 ```
 $ gdaltindex SF1987_index.geojson SF1987.tif
@@ -16,13 +16,21 @@ $ gdaltindex SF1987_index.geojson SF1987.tif
 
 ![Index of one raster file](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/single_index.png)
 
-From multiple rasters in a directory
+To index multiple rasters by filename
 
 ```
-$ gdaltindex -t_srs EPSG:4326 DOQQ/index.shp DOQQ/*/*.tif 
+$ gdaltindex -t_srs EPSG:4326 houston.tif los_angeles.tif
 ```
 
-![Index of multiple raster files](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/index.png)
+![Index of multiple raster files](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/index_2.png)
+
+To index multiple rasters in a directory
+
+```
+$ gdaltindex -t_srs DOQQ/index.shp DOQQ/*/*.tif 
+```
+
+![Index of multiple raster files in a directory](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/index.png)
 ## Creating a Mosaic
 
 Mosaicing raster tiles of all the files and then an overview image
