@@ -22,18 +22,18 @@ GeoTIFFs
 - los_angeles.tif
 
 Digital Elevation Model
--gt30w140n40_dem
+- gt30w140n40_dem
 
 Shapefiles
--Bus_Stops.shp
--Civic_Art.shp
--sfzipcodes.shp
+- Bus_Stops.shp
+- Civic_Art.shp
+- sfzipcodes.shp
 
 GeoJSON
 - sfbayhighways.geojson
 
 Geodatabase
--SanFranciscoESI.gdb
+- SanFranciscoESI.gdb
 
 Python Scripts
 - clipTiffs.py
@@ -42,7 +42,7 @@ Python Scripts
 - shp2geojson.py
 
 Color Configuration File
--colorramp.txt
+- colorramp.txt
 
 
 ## Installing GDAL
