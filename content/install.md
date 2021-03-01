@@ -15,7 +15,6 @@ nav_order: 1
 ## Installing GDAL
 
 ### On a Mac
-<br/>
 
 Download the GDAL Complete framework appropriate for your operating system here
 
@@ -24,14 +23,8 @@ Download the GDAL Complete framework appropriate for your operating system here
 After the installation is complete, open your terminal and run the following command
 
  ```
- $ echo 'export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH' >> ~/.bash_profile
+ $ export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH
  ```
-
-  Hit enter after that line, and run
-  
-```
-$ source ~/.bash_profile
-```
 
 Verify that GDAL is installed properly by opening a terminal and running the following command
 
@@ -40,7 +33,6 @@ $ gdalinfo --version
 ```
 
 ### On Windows
-<br/>
 
 
 
