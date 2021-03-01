@@ -10,9 +10,9 @@ Clipping is a method of subsetting data. The clipping parameters can be specifie
 
 ### Clipping by Bounding Box
 
-Use `gdal_translate` with the `-projwin` to specify the coordinates of a clipping extent (ulx uly lrx lry). 
+Use `gdal_translate` with the `-projwin` flag to specify the coordinates of a clipping extent (ulx uly lrx lry). 
 
-Clip _gt30w140n40.dem_ to bounding box (-121.852 39.593 -119.119 37.675)
+Let's clip _gt30w140n40.dem_ to bounding box (-121.852 39.593 -119.119 37.675)
 ```
 $ gdal_translate -projwin -121.852 39.593 -119.119 37.675 gt30w140n40_dem/gt30w140n40.dem gt30w140n40_clipped.dem
 ```
