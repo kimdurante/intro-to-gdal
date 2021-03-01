@@ -11,7 +11,7 @@ The `gdaltindex` utility creates a polygon boundary containing features for each
 To create an index from one raster file
 
 ```
-$ gdaltindex SF1987_index.geojson SF1987.tif
+$ gdaltindex SF1938_index.geojson SF1938.tif
 ```
 
 ![Index of one raster file](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/single_index.png)
