@@ -13,7 +13,7 @@ nav_order: 5
 Use the `-sql` flag to find and subset data by specific fields, attributes, or geometry
 
 ### Querying Data
-
+<br/>
 Use `ogrinfo` find the total number of stops listed in _bus_stops_wgs84.shp_
 <br/>
 
