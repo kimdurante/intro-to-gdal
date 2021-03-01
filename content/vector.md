@@ -10,6 +10,7 @@ nav_order: 3
 * [Exploring Data](#exploring-data-ogrinfo)
 * [Converting Data](#converting-data-ogr2ogr)
 * [Reprojecting Data](#reprojecting-data-ogr2ogr)
+* [Batch Processing](#batch-processing)
 
 ## OGR Formats and Drivers
 <br/>
@@ -241,3 +242,17 @@ $ ogr2ogr -t_srs EPSG:4326 bus_stops_wgs84.shp Bus_Stops.shp
 ```
 ogr2ogr -t_srs EPSG:4326 -f geojson bus_stops_wgs84.geojson Bus_Stops.shp
 ```
+
+### Batch Processing
+
+Performing the same operation on multiple vector files
+
+Convert shapefiles to GeoJSON
+geojson.sh
+```
+sh shp2geojson.sh
+```
+
+Convert GeoJSON to EPSG:4326
+
+
