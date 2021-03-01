@@ -60,7 +60,9 @@ for raster in findRasters(INPUT_FOLDER, '*.tif'):
     cmd = 'gdalwarp -q -cutline %s -crop_to_cutline -dstalpha -overwrite %s %s' % (CLIP, inRaster, outRaster)
     os.system(cmd)
    ```
+<p float="left">
+  <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/clip_1915.png" width="200" />
+  <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/clip_1938.png" width="200" /> 
+  <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/clip_1987.png" width="200" />
+</p>
 
-<img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/clip_1915.png" width="200">
-<img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/clip_1938.png" width="200">
-<img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/clip_1987.png" width="200">
