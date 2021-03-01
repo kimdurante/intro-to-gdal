@@ -250,7 +250,7 @@ Performing the same operation on multiple vector files
 Convert shapefiles to GeoJSON
 
 ```
-sh shp2geojson.sh
+shp2geojson.py
 ```
 
 Convert all shapefiles in a directory to EPSG:4326
@@ -278,3 +278,4 @@ for shapefile in findRasters(INPUT_FOLDER, '*.shp'):
     outShape = OUTPUT_FOLDER +'/' + newFile + '_wgs84.shp'
     cmd = 'ogr2ogr -t_srs EPSG:4326 %s %s' % (outShape, inShape)
     os.system(cmd)
+```
