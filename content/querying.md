@@ -77,7 +77,7 @@ ___
 
 ### Saving Query Results
 
-Saving search query results with `ogrinfo`
+Creating data from query results with `ogr2ogr`
 
 Find all the SF MUNI stops and save it to a shapefile
 
