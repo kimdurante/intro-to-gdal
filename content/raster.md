@@ -191,7 +191,7 @@ Band 1 Block=4800x1 Type=Int16, ColorInterp=Undefined
 ```
 ## Converting Data (gdal_translate)
 <br/>
-The gdal_translate utility can be used to convert raster data between different formats, as well as perform operationssuch as resampling, rescaling, and adding NoData values.
+The `gdal_translate` utility can be used to convert raster data between different formats, as well as perform operations such as resampling, rescaling, and adding NoData values.
 
 The ```-of``` flag is used to specify the output format. If not specified, the format is guessed from the extension. Use the short format name
 
