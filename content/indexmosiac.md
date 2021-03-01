@@ -19,8 +19,10 @@ gdaltindex SF1987_index.geojson SF1987.tif
 From multiple rasters in a directory
 
 ```
-$ gdaltindex -t_srs EPSG:4326 DOQQ/index.shp DOQQ/*/*.tif 
+$ gdaltindex -t_srs EPSG:4326 DOQQ/doqq_index.shp DOQQ/*/*.tif 
 ```
+
+<img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/index.png" width="500">
 
 ## Creating a Mosaic
 
