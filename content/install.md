@@ -4,8 +4,15 @@ title: Getting Started
 nav_order: 1
 ---
 
-## Installing GDAL
+## Getting Started
 
+* [Workshop Data](#workshop-data)
+* [Installing GDAL/OGR](#installing-gdal-ogr)
+
+## Workshop Data
+
+
+## Installing GDAL/OGR
 
 ### On a Mac
 <br/>
