@@ -10,7 +10,7 @@ Clipping is a method of subsetting data. The clipping parameters can be specifie
 
 ### Clipping by Bounding Box
 
-In the gdal_translate utility, the `-projwin` flag is used to specify the clipping extent (ulx uly lrx lry). 
+Use `gdal_translate` with the `-projwin` to specify the coordinates of a clipping extent (ulx uly lrx lry). 
 
 Clip _gt30w140n40.dem_ to bounding box (-121.852 39.593 -119.119 37.675)
 ```
@@ -19,9 +19,11 @@ $ gdal_translate -projwin -121.852 39.593 -119.119 37.675 gt30w140n40_dem/gt30w1
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/dem_clip.png" width="500">
 
 
-### Clipping by Vector
+### Clipping by Polygon Boundary
 
-Clip _SF1987_wgs84.tif_ to the 94109 boundary by using `-cutline`
+Use `gdalwarp` with the `-cutline` flag to specify the clipping area 
+
+Clip the San Francisco quadrangle to the boundary of zip code 94109`-cutline`
 
 ```
 $ gdalwarp -cutline sf_94109.geojson SF1987_wgs84.tif SF1987_wgs84_clipped.tif
