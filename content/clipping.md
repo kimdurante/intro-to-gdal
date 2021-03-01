@@ -61,8 +61,8 @@ for raster in findRasters(INPUT_FOLDER, '*.tif'):
     os.system(cmd)
    ```
 <p float="left">
-  <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/clip_1915.png" width="150" height="150" />
-  <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/clip_1938.png" width="150" height="150"/>
-  <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/clip_1987.png" width="150" height="150"/>
+  <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/clip_1915.png" width="200" height="200" />
+  <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/clip_1938.png" width="200" height="200"/>
+  <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/clip_1987.png" width="200" height="200"/>
 </p>
 
