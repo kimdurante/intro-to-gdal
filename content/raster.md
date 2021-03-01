@@ -213,6 +213,7 @@ gdal_translate -scale 10 1500 0 255 -co COMPRESS=JPEG SF1993.tif SF1993_rescaled
 
 ## Warping Data (gdalwarp)
 <br/>
+
 The `gdalwarp` utility is used for reprojection and image mosaicing. It can reproject to any supported projection, and can also apply ground control points stored with the image if the image is “raw” with control information.
 
 
