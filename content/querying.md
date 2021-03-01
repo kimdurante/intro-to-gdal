@@ -9,6 +9,7 @@ nav_order: 5
 * [Querying Data](#querying-data)
 * [Saving Data](#saving-data)
 <br/>
+
 Use the `-sql` flag to find and subset data by specific fields, attributes, or geometry
 
 ### Querying Data
