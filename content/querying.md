@@ -5,6 +5,9 @@ nav_order: 5
 ---
 
 ## Selecing Data with SQL Queries
+
+* [Querying Data](#querying-data)
+* [Saving Data](#saving-data)
 <br/>
 
 Use the `-sql` flag to find and subset data by specific fields, attributes, or geometry
@@ -50,7 +53,7 @@ OGRFeature(bus_stops_wgs84):0
   COUNT_* (Integer) = 13880
 ```
 
-### Querying Data and Saving to a New File
+### Saving Data
 
 SF MUNI stops: 13880
 
