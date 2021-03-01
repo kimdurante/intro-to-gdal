@@ -9,6 +9,8 @@ nav_order: 5
 
 Use the `-sql` flag to find and subset data by specific fields, attributes, or geometry
 
+### Querying Data
+
 Use `ogrinfo` find the total number of stops listed in _bus_stops_wgs84.shp_
 
 ```
@@ -47,6 +49,8 @@ Layer name: bus_stops_wgs84
 OGRFeature(bus_stops_wgs84):0
   COUNT_* (Integer) = 13880
 ```
+
+### Querying Data and Saving to a New File
 
 SF MUNI stops: 13880
 
