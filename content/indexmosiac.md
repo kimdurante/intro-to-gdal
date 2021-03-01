@@ -19,7 +19,7 @@ $ gdaltindex SF1938_index.geojson SF1938.tif
 To index multiple rasters by filename
 
 ```
-$ gdaltindex -t_srs EPSG:4326 houston.tif los_angeles.tif
+$ gdaltindex -t_srs EPSG:4326 maps_index.shp houston.tif los_angeles.tif
 ```
 
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/index_2.png" width="500">
@@ -27,7 +27,7 @@ $ gdaltindex -t_srs EPSG:4326 houston.tif los_angeles.tif
 To index multiple rasters in a directory
 
 ```
-$ gdaltindex -t_srs DOQQ/index.shp DOQQ/*/*.tif 
+$ gdaltindex doqq/doqq_index.shp doqq/*.tif 
 ```
 
 ![Index of multiple raster files in a directory](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/index.png)
