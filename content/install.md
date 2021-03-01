@@ -35,6 +35,9 @@ GeoJSON
 Geodatabase
 - SanFranciscoESI.gdb
 
+DOQQ
+- Digital Orthophoto Quarter Quads (DOQQ)
+
 Python Scripts
 - clipTiffs.py
 - projectShapes.py
