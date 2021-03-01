@@ -83,6 +83,7 @@ Find all the SF MUNI stops and save it to a shapefile
 ```
 $ ogr2ogr sf_muni_stops.shp bus_stops_wgs84.shp -sql "SELECT * FROM bus_stops_wgs84 WHERE AGENCY = 'San Francisco MUNI'"
 ```
+<img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/sfmuni.png" width="500">
 
 ___
 
