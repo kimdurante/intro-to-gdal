@@ -22,7 +22,7 @@ To index multiple rasters by filename
 $ gdaltindex -t_srs EPSG:4326 houston.tif los_angeles.tif
 ```
 
-![Index of multiple raster files](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/index_2.png)
+<img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/index_2.png" width="500">
 
 To index multiple rasters in a directory
 
