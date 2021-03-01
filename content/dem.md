@@ -22,5 +22,4 @@ $ gdaldem color-relief gt30w140n40_clipped.dem colorramp.txt color_relief.tif
 
 ```
 $ gdal_contour -a elev -i 20 gt30w140n40_clipped.dem contours.shp
-
 ```
