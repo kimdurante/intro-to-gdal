@@ -224,7 +224,7 @@ $ ogr2ogr -f csv CivicArt.csv CivicArt.shp
 <br/>
 
 ```
-$ ogr2ogr -f geojson sfzipcodes.shp sfzipcodes.shp
+$ ogr2ogr -f geojson sfzipcodes.geojson sfzipcodes.shp
 ```
 ## Reprojecting Data (ogr2ogr)
 <br/>
