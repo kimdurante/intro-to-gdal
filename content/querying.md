@@ -55,6 +55,8 @@ OGRFeature(bus_stops_wgs84):0
 
 A: 23954
 
+___
+
 #### Q: How many stops are serviced by San Francisco MUNI?
 
 ```
@@ -67,18 +69,22 @@ Layer name: bus_stops_wgs84
 OGRFeature(bus_stops_wgs84):0
   COUNT_* (Integer) = 13880
 ```
-#### A: 13880
 
+A: 13880
+
+___
 
 ### Saving Query Results
 
 Saving search query results with `ogrinfo`
 
-Find all the SF MUNI stops and save it to CSV
+Find all the SF MUNI stops and save it to a shapefile
 
 ```
-$ ogr2ogr sf_muni_stops.csv bus_stops_wgs84.shp -sql "SELECT * FROM bus_stops_wgs84 WHERE AGENCY = 'San Francisco MUNI'"
+$ ogr2ogr sf_muni_stops.shp bus_stops_wgs84.shp -sql "SELECT * FROM bus_stops_wgs84 WHERE AGENCY = 'San Francisco MUNI'"
 ```
+
+___
 
 Find the boundary of zipcode 94109 and save it to GeoJSON
 
