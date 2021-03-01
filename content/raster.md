@@ -6,7 +6,6 @@ nav_order: 2
 
 ## Working with Raster Data
 
-<br/>
 
 * [Formats and Drivers](#gdal-formats-and-drivers)
 * [Exploring Data](#exploring-data-gdalinfo)
