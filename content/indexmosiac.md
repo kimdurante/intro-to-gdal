@@ -30,7 +30,8 @@ To index multiple rasters in a directory
 $ gdaltindex doqq/doqq_index.shp doqq/*.tif 
 ```
 
-![Index of multiple raster files in a directory](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/index.png)
+<img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/index.png" width="500">
+
 ## Creating a Mosaic
 
 Mosaicing raster tiles of all the files and then an overview image
