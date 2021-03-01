@@ -12,7 +12,7 @@ nav_order: 1
 ## Workshop Data
 
 
-## Installing GDAL/OGR
+## Installing GDAL
 
 ### On a Mac
 <br/>
