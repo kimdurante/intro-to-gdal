@@ -257,7 +257,7 @@ Band 4 Block=7137x1 Type=Byte, ColorInterp=Alpha
 Performing the same operation on multiple raster files
 
 
-Reproject all GeoTIFFs to WGS_84
+Reproject all GeoTIFFs to WGS_84 and add an alpha channel
 
 ```
 $ python projectTiffs.py
