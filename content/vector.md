@@ -243,7 +243,7 @@ $ ogr2ogr -t_srs EPSG:4326 bus_stops_wgs84.shp Bus_Stops.shp
 $ ogr2ogr -t_srs EPSG:4326 -f geojson bus_stops_wgs84.geojson Bus_Stops.shp
 ```
 
-### Batch Processing
+## Batch Processing
 
 Performing the same operation on multiple vector files
 
