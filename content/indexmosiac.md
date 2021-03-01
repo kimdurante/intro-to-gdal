@@ -11,18 +11,16 @@ Create a polygon boundary containing attributes for each input file and a polygo
 From one raster
 
 ```
-gdaltindex SF1987_index.geojson SF1987.tif
+$ gdaltindex SF1987_index.geojson SF1987.tif
 ```
 
-![Index](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/index_1.png)
+![Index](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/single_index.png)
 
 From multiple rasters in a directory
 
 ```
-$ gdaltindex -t_srs EPSG:4326 DOQQ/doqq_index.shp DOQQ/*/*.tif 
+$ gdaltindex -t_srs EPSG:4326 DOQQ/index.shp DOQQ/*/*.tif 
 ```
-
-<img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/index.png" width="500">
 
 ## Creating a Mosaic
 
@@ -45,4 +43,6 @@ gdalwarp -t_srs EPSG:4326 -dstnodata 0 -co COMPRESS=JPEG  -of gtiff DOQQ/doqqs_m
 ```
 
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/mosaiced.png" width="500">
+
+## Creating a Raster Tile Index
 
