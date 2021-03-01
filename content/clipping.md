@@ -23,10 +23,10 @@ $ gdal_translate -projwin -121.852 39.593 -119.119 37.675 gt30w140n40_dem/gt30w1
 
 Use `gdalwarp` with the `-cutline` flag to specify the clipping area 
 
-Clip the San Francisco quadrangle to the boundary of zip code 94109`-cutline`
+Clip the San Francisco quadrangle to the boundary of zip code 94109. Use the `-crop_to_cutline` flag to crop the extent of the new dataset to the extent of the cutline
 
 ```
-$ gdalwarp -cutline sf_94109.geojson SF1987_wgs84.tif SF1987_wgs84_clipped.tif
+$ gdalwarp -cutline sf_94109.geojson `-crop_to_cutline SF1987_wgs84.tif SF1987_wgs84_clipped.tif
 ```
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/94109_alpha_c.png" width="500">
 
@@ -38,17 +38,20 @@ import os
 import fnmatch
 
 CLIP= "sf_94109.geojson"
-INPUT_FOLDER="SFMAPS"
-OUTPUT_FOLDER= "wgs84"
+INPUT_FOLDER="."
+OUTPUT_FOLDER= "clipped"
+if not os.path.exists('clipped'):
+    os.makedirs('clipped')
 
 def findRasters (path, filter):
     for root, dirs, files in os.walk(path):
         for file in fnmatch.filter(files, filter):
             yield file
-
+        break
 for raster in findRasters(INPUT_FOLDER, '*.tif'):
+    newFile = raster[:-4]
     inRaster = INPUT_FOLDER + '/' + raster
-    outRaster = OUTPUT_FOLDER + '/clip_' + raster
-    cmd = 'gdalwarp -q -cutline %s -crop_to_cutline -dstalpha %s %s' % (CLIP, inRaster, outRaster)
+    outRaster = OUTPUT_FOLDER +'/' + newFile + '_clipped.tif'
+    cmd = 'gdalwarp -q -cutline %s -crop_to_cutline -dstalpha -overwrite %s %s' % (CLIP, inRaster, outRaster)
     os.system(cmd)
    ```
