@@ -9,12 +9,12 @@ nav_order: 5
 * [Querying Data](#querying-data)
 * [Saving Data](#saving-data)
 <br/>
-
 Use the `-sql` flag to find and subset data by specific fields, attributes, or geometry
 
 ### Querying Data
 
 Use `ogrinfo` find the total number of stops listed in _bus_stops_wgs84.shp_
+<br/>
 
 ```
 $ ogrinfo bus_stops_wgs84.shp -sql "SELECT COUNT(*) FROM bus_stops_wgs84"
