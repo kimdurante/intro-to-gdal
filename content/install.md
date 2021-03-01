@@ -15,7 +15,10 @@ Download the zip file of workshop data
 
 [Download Data](../data/us-national-parks.geojson){: .btn .btn-blue }
 
-Summary of files included in the workshop data
+<details>
+<summary>Summary of files included in the workshop data</summary>
+<br>
+This is the hidden dropdown content.
 
 GeoTIFFs
 - SF1987.tif
@@ -49,6 +52,7 @@ Python Scripts
 Color Configuration File
 - colorramp.txt
 
+</details>
 
 ## Installing GDAL
 
