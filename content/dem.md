@@ -4,7 +4,7 @@ title: Digital Elevtion Models
 nav_order: 7
 ---
 
-## Digital Elevtion Models
+## Digital Elevation Models
 
 ### Hillshade
 
