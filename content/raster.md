@@ -245,7 +245,7 @@ Band 4 Block=7137x1 Type=Byte, ColorInterp=Alpha
 ## Batch Processing
 <br/>
 Performing the same operation on multiple raster files
-<br/>
+
 ```
 $ python reprojectTiffs.py
 ```
