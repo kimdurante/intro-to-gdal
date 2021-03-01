@@ -19,30 +19,30 @@ Download the zip file of workshop data
 <summary>Summary of files included in the workshop data</summary>
 <br>
 
-GeoTIFFs
-- SF1987.tif
-- SF1938.tif
-- houston.tif
-- los_angeles.tif
+* GeoTIFFs
+  SF1987.tif
+  SF1938.tif
+  houston.tif
+  los_angeles.tif
 
-Digital Elevation Model
-- gt30w140n40_dem
+* Digital Elevation Model
+  gt30w140n40_dem
 
-Shapefiles
-- Bus_Stops.shp
-- Civic_Art.shp
-- sfzipcodes.shp
+* Shapefiles
+  Bus_Stops.shp
+  Civic_Art.shp
+  sfzipcodes.shp
 
-GeoJSON
-- sfbayhighways.geojson
+* GeoJSON
+  sfbayhighways.geojson
 
-Geodatabase
-- SanFranciscoESI.gdb
+ * Geodatabase
+ SanFranciscoESI.gdb
 
-DOQQ
-- Digital Orthophoto Quarter Quads (DOQQ)
-
-Python Scripts
+ * DOQQ
+ Digital Orthophoto Quarter Quads (DOQQ)
+ 
+ * Python Scripts
 - clipTiffs.py
 - projectShapes.py
 - projectTiffs.py
