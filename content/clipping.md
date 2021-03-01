@@ -30,7 +30,8 @@ $ gdalwarp -cutline sf_94109.geojson SF1987_wgs84.tif SF1987_wgs84_clipped.tif
 
 ### Batch Processing
 
-```import os
+```
+import os
 import fnmatch
 
 CLIP= "sf_94109.geojson"
