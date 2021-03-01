@@ -26,7 +26,8 @@ See a list of available formats
 
 ## Exploring Data (ogrinfo)
 <br/>
-Use ```ogrinfo``` to list information about vector data
+
+Use `ogrinfo` to list information about vector data
 
 ### Shapefiles
 <br/>
