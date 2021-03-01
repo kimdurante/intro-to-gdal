@@ -16,7 +16,9 @@ nav_order: 2
 
 ## GDAL Formats and Drivers
 <br/>
-GDAL provides support for a wide-range of raster file formats through the use of drivers which contain specifications and capabilities for handling data.
+GDAL provides support for a wide-range of raster file formats through the use of drivers which contain specifications and capabilities for handling data. The list of raster drivers currently supported by GDAL can be found here
+
+[https://gdal.org/drivers/raster/index.html](https://gdal.org/drivers/raster/index.html).
 
 To view a list of available raster formats, run the following command
 
@@ -24,9 +26,6 @@ To view a list of available raster formats, run the following command
 ```
 $ gdal_translate --formats
 ```
-The list of raster drivers currently supported by GDAL can be found here
-
-[https://gdal.org/drivers/raster/index.html](https://gdal.org/drivers/raster/index.html).
 
 
 ## Exploring Data (gdalinfo)
@@ -212,6 +211,8 @@ gdalwarp is a reprojection warping, and image mosaicing utility. It can reprojec
 
 
 ### Reprojecting Data
+<br/>
+
 ```
 $ gdalwarp -t_srs EPSG:4326 SF1987.tif SF1987_wgs84.tif
 ```
@@ -241,7 +242,8 @@ Band 3 Block=7137x1 Type=Byte, ColorInterp=Blue
 Band 4 Block=7137x1 Type=Byte, ColorInterp=Alpha
 ```
 
-### Batch Processing
+## Batch Processing
+<br/>
 
 ```
 $ python reprojectTiffs.py
