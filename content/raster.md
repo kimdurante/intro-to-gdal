@@ -259,7 +259,7 @@ Performing the same operation on multiple raster files
 Reproject all GeoTIFFs to WGS_84
 
 ```
-$ python reprojectTiffs.py
+$ python projectTiffs.py
 ```
 
 ```
