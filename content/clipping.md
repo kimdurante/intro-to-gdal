@@ -28,7 +28,7 @@ Clip the San Francisco quadrangle to the boundary of zip code 94109. Use the `-c
 ```
 $ gdalwarp -cutline sf_94109.geojson `-crop_to_cutline SF1987_wgs84.tif SF1987_wgs84_clipped.tif
 ```
-<img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/clip_SF1987.png" width="500">
+<img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/clip_1987.png" width="500">
 
 ## Batch Processing
 
