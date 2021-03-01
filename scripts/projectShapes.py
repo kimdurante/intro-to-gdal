@@ -1,13 +1,17 @@
 import os
 import fnmatch
 
-INPUT_FOLDER="SFMAPS"
+INPUT_FOLDER="."
 OUTPUT_FOLDER= "wgs84"
+if not os.path.exists('wgs84'):
+    os.makedirs('wgs84')
 
 def findRasters (path, filter):
-    for root, dirs, files in os.walk(path):
+    for root, dirs, files in os.walk('.'):
         for file in fnmatch.filter(files, filter):
             yield file
+        break
+
 
 for shapefile in findRasters(INPUT_FOLDER, '*.shp'):
     newFile = shapefile[:-4]
