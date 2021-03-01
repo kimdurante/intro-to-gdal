@@ -23,7 +23,7 @@ $ gdal_translate -projwin -121.852 39.593 -119.119 37.675 gt30w140n40_dem/gt30w1
 
 Use `gdalwarp` with the `-cutline` flag to specify the clipping area 
 
-Clip the San Francisco quadrangle to the boundary of zip code 94109. Use the `-crop_to_cutline` flag to crop the extent of the new dataset to the extent of the cutline
+Clip the San Francisco quadrangle to the boundary of zip code 94109. Use the `-crop_to_cutline` flag to crop the extent of the new data to the extent of the cutline
 
 ```
 $ gdalwarp -cutline sf_94109.geojson `-crop_to_cutline SF1987_wgs84.tif SF1987_wgs84_clipped.tif
@@ -32,7 +32,7 @@ $ gdalwarp -cutline sf_94109.geojson `-crop_to_cutline SF1987_wgs84.tif SF1987_w
 
 ## Batch Processing
 
-Clip multiple GeoTIFFs to a polygon boundary
+Clipping multiple GeoTIFFs to a polygon boundary
 
 ```
 $ python clipTiffs.py
