@@ -15,7 +15,9 @@ Use the `-sql` flag to find and subset data by specific fields, attributes, or g
 ### Querying Data
 <br/>
 
-Use `ogrinfo` find the total number of stops listed in _bus_stops_wgs84.shp_
+Querying data with `ogrinfo`
+
+#### Q: HOW MANY BUS STOPS ARE CONTAINED IN THIS FILE (_bus_stops_wgs84.shp_)
 <br/>
 
 ```
@@ -33,16 +35,16 @@ OGRFeature(bus_stops_wgs84):0
   COUNT_* (Integer) = 79810
 ```
 
-Total number of stops: 79810
+#### A: 79810
 
-How many unique stops are contained in this layer?
+#### Q: How many unique stops are contained in this layer?
 ```
 $ ogrinfo bus_stops_wgs84.shp -sql "SELECT COUNT(DISTINCT STOPID) FROM bus_stops_wgs84"
 ```
 
-Total unique stops: 23954
+#### A: 23954
 
-How many stops are serviced by San Francisco MUNI?
+#### Q: How many stops are serviced by San Francisco MUNI?
 
 ```
 $ ogrinfo bus_stops_wgs84.shp -sql "SELECT COUNT(*) FROM bus_stops_wgs84 WHERE AGENCY = 'San Francisco MUNI'"
@@ -54,10 +56,12 @@ Layer name: bus_stops_wgs84
 OGRFeature(bus_stops_wgs84):0
   COUNT_* (Integer) = 13880
 ```
+#### A: 13880
+
 
 ### Saving Query Results
 
-SF MUNI stops: 13880
+Saving search query results with `ogrinfo`
 
 Find all the SF MUNI stops and save it to CSV
 
