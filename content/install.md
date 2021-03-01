@@ -11,7 +11,9 @@ nav_order: 1
 
 ## Workshop Data
 
-Download the zip file containing the workshop data here
+Download the zip file of workshop data
+
+[Download Data](../data/us-national-parks.geojson){: .btn .btn-blue }
 
 Summary of files included in the workshop data
 
