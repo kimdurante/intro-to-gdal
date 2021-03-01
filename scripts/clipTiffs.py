@@ -13,5 +13,5 @@ def findRasters (path, filter):
 for raster in findRasters(INPUT_FOLDER, '*.tif'):
     inRaster = INPUT_FOLDER + '/' + raster
     outRaster = OUTPUT_FOLDER + '/clip_' + raster
-    cmd = 'gdalwarp -q -cutline %s -crop_to_cutline -dstalpha %s %s' % (CLIP, inRaster, outRaster)
+    cmd = 'gdalwarp -q -cutline %s -crop_to_cutline -dstalpha -overwrite %s %s' % (CLIP, inRaster, outRaster)
     os.system(cmd)
