@@ -4,7 +4,7 @@ title: Querying Data
 nav_order: 5
 ---
 
-## Selecing Data with SQL Queries
+## Finding and Selecing Data with SQL Queries
 
 * [Querying Data](#querying-data)
 * [Saving Query Results](#saving-query-results)
