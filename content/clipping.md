@@ -27,3 +27,24 @@ Clip _SF1987_wgs84.tif_ to the 94109 boundary by using `-cutline`
 $ gdalwarp -cutline sf_94109.geojson SF1987_wgs84.tif SF1987_wgs84_clipped.tif
 ```
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/94109_alpha_c.png" width="500">
+
+### Batch Processing
+
+```import os
+import fnmatch
+
+CLIP= "sf_94109.geojson"
+INPUT_FOLDER="SFMAPS"
+OUTPUT_FOLDER= "wgs84"
+
+def findRasters (path, filter):
+    for root, dirs, files in os.walk(path):
+        for file in fnmatch.filter(files, filter):
+            yield file
+
+for raster in findRasters(INPUT_FOLDER, '*.tif'):
+    inRaster = INPUT_FOLDER + '/' + raster
+    outRaster = OUTPUT_FOLDER + '/clip_' + raster
+    cmd = 'gdalwarp -q -cutline %s -crop_to_cutline -dstalpha %s %s' % (CLIP, inRaster, outRaster)
+    os.system(cmd)
+   ```
