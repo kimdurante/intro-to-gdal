@@ -58,7 +58,7 @@ A: 23954
 
 ___
 
-#### Q: How many stops are serviced by San Francisco MUNI?
+Q: How many stops are serviced by San Francisco MUNI?
 
 ```
 $ ogrinfo bus_stops_wgs84.shp -sql "SELECT COUNT(*) FROM bus_stops_wgs84 WHERE AGENCY = 'San Francisco MUNI'"
