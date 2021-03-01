@@ -33,6 +33,11 @@ $ gdalwarp -cutline sf_94109.geojson `-crop_to_cutline SF1987_wgs84.tif SF1987_w
 ## Batch Processing
 
 Clip multiple GeoTIFFs to a polygon boundary
+
+```
+$ python clipTiffs.py
+```
+
 ```
 import os
 import fnmatch
@@ -55,3 +60,7 @@ for raster in findRasters(INPUT_FOLDER, '*.tif'):
     cmd = 'gdalwarp -q -cutline %s -crop_to_cutline -dstalpha -overwrite %s %s' % (CLIP, inRaster, outRaster)
     os.system(cmd)
    ```
+
+<img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/clip_1915.png" width="200">
+<img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/clip_1938.png" width="200">
+<img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/clip_1987.png" width="200">
