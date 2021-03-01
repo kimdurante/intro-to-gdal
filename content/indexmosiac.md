@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Mosaicing
+title: Indexing and Mosaicing
 nav_order: 6
 ---
 
