@@ -16,11 +16,7 @@ gdaltindex SF1987_index.geojson SF1987.tif
 
 ![Index](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/index_1.png)
 
-From multiple rasters
-
-```
-gdaltindex -t_srs EPSG:4326 
-```
+From multiple rasters in a directory
 
 ```
 $ gdaltindex -t_srs EPSG:4326 DOQQ/index.shp DOQQ/*/*.tif 
