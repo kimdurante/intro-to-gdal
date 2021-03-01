@@ -246,6 +246,8 @@ Band 4 Block=7137x1 Type=Byte, ColorInterp=Alpha
 <br/>
 Performing the same operation on multiple raster files
 
+Reproject all GeoTIFFs to WGS_84
+
 ```
 $ python reprojectTiffs.py
 ```
