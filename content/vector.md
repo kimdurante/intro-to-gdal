@@ -5,7 +5,7 @@ nav_order: 3
 ---
 
 ## Working with Vector Data
-<br/>
+
 
 * [Formats and Drivers](#ogr-formats-and-drivers)
 * [Exploring Data](#exploring-data-ogrinfo)
