@@ -62,7 +62,7 @@ for raster in findRasters(INPUT_FOLDER, '*.tif'):
    ```
 <p float="left">
   <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/clip_1915.png" width="300" />
-      
+      <br/>
   <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/clip_1938.png" width="300" />
 </p>
 
