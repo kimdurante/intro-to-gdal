@@ -249,6 +249,8 @@ Band 3 Block=7137x1 Type=Byte, ColorInterp=Blue
 Band 4 Block=7137x1 Type=Byte, ColorInterp=Alpha
 ```
 
+<img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/SF1987_alpha.png" width="500">
+
 ## Batch Processing
 <br/>
 Performing the same operation on multiple raster files
