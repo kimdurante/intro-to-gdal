@@ -11,6 +11,39 @@ nav_order: 1
 
 ## Workshop Data
 
+Download the zip file containing the workshop data here
+
+Summary of files included in the workshop data
+
+GeoTIFFs
+- SF1987.tif
+- SF1938.tif
+- houston.tif
+- los_angeles.tif
+
+Digital Elevation Model
+-gt30w140n40_dem
+
+Shapefiles
+-Bus_Stops.shp
+-Civic_Art.shp
+-sfzipcodes.shp
+
+GeoJSON
+- sfbayhighways.geojson
+
+Geodatabase
+-SanFranciscoESI.gdb
+
+Python Scripts
+- clipTiffs.py
+- projectShapes.py
+- projectTiffs.py
+- shp2geojson.py
+
+Color Configuration File
+-colorramp.txt
+
 
 ## Installing GDAL
 
