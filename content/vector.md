@@ -251,7 +251,7 @@ Performing the same operation on multiple vector files
 Convert shapefiles to GeoJSON
 
 ```
-$ shp2geojson.py
+$ python shp2geojson.py
 ```
 
 ```
