@@ -16,7 +16,7 @@ Clipping is a method of subsetting data. The clipping parameters can be specifie
 * [Batch Processing](#batch-processing)
 
 
-### Clipping by Bounding Box
+## Clipping by Bounding Box
 
 
 Use `gdal_translate` with the `-projwin` flag to specify the coordinates of a clipping extent (ulx uly lrx lry). 
@@ -27,7 +27,8 @@ $ gdal_translate -projwin -121.852 39.593 -119.119 37.675 gt30w140n40_dem/gt30w1
 ```
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/dem_clip.png" width="500">
 
-### Clipping Vector Data by Polygon Boundary 
+## Clipping Vector Data by Polygon Boundary 
+
 
 Let's clip the SF MUNI stops shapefile to contain only stops in the 94103 zip code. Use the `-clipsrc` flag to specify the clipping extent
 
@@ -37,7 +38,8 @@ $ ogr2ogr -clipsrc sf_94103.shp sf94103_muni_stops.shp sf_muni_stops.shp
 
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/94103_stops.png" width="500">
 
-### Clipping Raster Data by Polygon Boundary
+## Clipping Raster Data by Polygon Boundary
+
 
 Use `gdalwarp` with the `-cutline` flag to specify the clipping extent
 
@@ -49,6 +51,7 @@ $ gdalwarp -cutline sf_94109.geojson -crop_to_cutline SF1987_wgs84.tif SF1987_wg
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/clip_1987.png" width="500">
 
 ## Batch Processing
+
 
 Clipping multiple GeoTIFFs to a polygon boundary
 
