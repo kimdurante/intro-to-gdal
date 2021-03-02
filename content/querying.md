@@ -12,7 +12,7 @@ nav_order: 5
 
 Use the `-sql` flag to find and subset data by specific fields, attributes, or geometry
 
-### Querying Data
+## Querying Data
 
 Querying data with `ogrinfo`
 
@@ -76,7 +76,7 @@ A: 13880
 
 ---
 
-### Saving Query Results
+## Saving Query Results
 
 
 Creating data from query results with `ogr2ogr`
