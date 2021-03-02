@@ -27,6 +27,8 @@ Let's clip the SF MUNI stops shapefile to contain only stops in the 94103 zip co
 ogr2ogr -clipsrc sf_94103.shp  sf94103_muni_stops.shp sf_muni_stops.shp
 ```
 
+<img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/94103_stops.png" width="500">
+
 ### Clipping a Raster Data by Polygon Boundary
 
 Use `gdalwarp` with the `-cutline` flag to specify a clipping boundary
