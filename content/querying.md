@@ -14,7 +14,6 @@ Use the `-sql` flag to find and subset data by specific fields, attributes, or g
 
 ### Querying Data
 <br/>
-
 Querying data with `ogrinfo`
 
 Q: How many bus stops are contained in this file (_bus_stops_wgs84.shp_)
