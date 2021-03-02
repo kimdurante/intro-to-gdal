@@ -202,7 +202,7 @@ $ gdal_translate -of png SF1987.tif SF1987_converted.png
 
 Use the creation options flag ```-co``` along with ```COMPRESS=JPEG``` output a JPEG compressed GeoTIFF
 ```
-$ gdal_translate -co COMPRESS=JPEG SF1993.tif SF1993_compressed.tif
+$ gdal_translate -co COMPRESS=JPEG SF1938.tif SF1938_compressed.tif
 ```
 
 [Understanding Compression of Geospatial Raster Imagery](https://files.nc.gov/ncdit/documents/files/TAC-compression.pdf)
