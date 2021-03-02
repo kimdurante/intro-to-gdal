@@ -67,7 +67,7 @@ Summary of files included with this download
 
 * Vector Data
   - Bus_Stops.shp - San Francisco Bay Area bus stops
-  - Civic_Art.shp - - locations of artwork around San Francisco
+  - Civic_Art.shp - locations of artwork around San Francisco
   - sfzipcodes.shp - Zip Code boundaries in San Francisco
   - sfbayhighways.geojson - San Francisco Bay Area highways
   - SanFranciscoESI.gdb - Geodatabase created by the San Francisco Estuary Institute 
