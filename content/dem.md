@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Digital Elevtion Models
+title: Digital Elevation Models
 nav_order: 7
 ---
 
