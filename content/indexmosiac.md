@@ -59,5 +59,5 @@ $ gdalwarp -t_srs EPSG:4326 -dstnodata 0 -co COMPRESS=JPEG  -co TILED=YES -co PH
 Run the command above again. You will get an error message saying that the file already exists. Use the `-overwrite` flag to overwrite the existing file
 
 ```
-$ gdalwarp -t_srs EPSG:4326 -dstnodata 0 -co COMPRESS=JPEG  -co TILED=YES -co PHOTOMETRIC=YCBCR -of gtiff -overwrite doqqs/doqqs_merged.vrt doqq/doqq_merged.tif
+$ gdalwarp -t_srs EPSG:4326 -dstnodata 0 -co COMPRESS=JPEG  -co TILED=YES -co PHOTOMETRIC=YCBCR -of gtiff -overwrite doqq/doqq_merged.vrt doqq/doqq_merged.tif
 ```
