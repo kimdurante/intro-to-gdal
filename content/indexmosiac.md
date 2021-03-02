@@ -40,7 +40,7 @@ Mosaicing raster tiles (DOQQs) and creating an overview image using a VRT (Virtu
 
 Create an input list of files from the _doqq_ directory
 ```
-$ for file in doqq/*/*.tif*; do echo "$file" >> doqq/doqq.txt; done
+$ for file in doqq/*.tif*; do echo "$file" >> doqq/doqq.txt; done
 ```
 Use the `gdalbuildvrt` utility with `-input_file_list` 
 ```
