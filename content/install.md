@@ -57,9 +57,9 @@ Summary of files included with this download
 * Raster Data
   - SF1915.tif - georeferenced map of San Francisco (1915)
   - SF1938.tif - composite image of a set of 164 large format black and white vertical aerial photographs of San Francisco (1938)
-  - SF1987.tif - aerial photgraph of Northeast Quandrangle of San Francisco (1987)
+  - SF1987.tif - aerial photgraph of northeast quandrangle of San Francisco (1987)
   - houston.tif - urban footprint of Houston, TX
-  - los_angeles.tif - urban footprint of Loas Angeles, CA
+  - los_angeles.tif - urban footprint of Los Angeles, CA
   - gt30w140n40_dem/gt30w140n40.dem - Global 30 Arc-Second Elevation (GTOPO30) / digital elevation model 
   - doqq/* - Digital Orthophoto Quadrangles / 9 tiles from a section of Louisiana
 
