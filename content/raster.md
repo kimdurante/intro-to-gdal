@@ -200,18 +200,16 @@ Converting a GeoTIFF to a PNG:
 $ gdal_translate -of png SF1987.tif SF1987_converted.png
 ```
 
-Use the creation options flag ```-co``` along with ```COMPRESS=JPEG``` output a JPEG compressed GeoTIFF
+The San Francisco 1938 photo (_SF1938.tif_) is 464 MB. Let's compress the image using the creation option flags ```-co``` with `COMPRESS=JPEG`, `TILED=YES`` and PHOTOMETRIC=YCBCR` to create a compressed, tiled, YCBCR photometric GeoTIFF
+
 ```
-$ gdal_translate -co COMPRESS=JPEG SF1938.tif SF1938_compressed.tif
+$ gdal_translate -co COMPRESS=JPEG -co TILED=YES -co PHOTOMETRIC=YCBCR SF1938.tif SF1938_compressed.tif
 ```
+
+Resulting file size: 157.4 MB
 
 [Understanding Compression of Geospatial Raster Imagery](https://files.nc.gov/ncdit/documents/files/TAC-compression.pdf)
 
-Rescaling data
-
-```
-gdal_translate -scale 10 1500 0 255 -co COMPRESS=JPEG SF1993.tif SF1993_rescaled.tif
-```
 
 ## Warping Data (gdalwarp)
 <br/>
