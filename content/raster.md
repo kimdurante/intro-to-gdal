@@ -140,7 +140,7 @@ Band 2 Block=6244x1 Type=Byte, ColorInterp=Green
 Band 3 Block=6244x1 Type=Byte, ColorInterp=Blue
 ```
 
-Run `ogrinfo` on the 1938 Composite image of San Francisco. Notice that each band (RGB) has a NoData Value of 0. 
+Run `gdalinfo` on the 1938 Composite image of San Francisco. Notice that each band (RGB) has a NoData Value of 0. 
 
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/SF1938_map.png" width="500">
 ```
@@ -274,7 +274,11 @@ The San Francisco 1938 photo (_SF1938.tif_) is 464 MB. Let's compress the image 
 $ gdal_translate -co COMPRESS=JPEG -co TILED=YES -co PHOTOMETRIC=YCBCR SF1938.tif SF1938_compressed.tif
 ```
 
-Resulting file size: 157.4 MB
+The resulting file size is 157.4 MB. Run `gdalinfo` to see the new information
+
+```
+gdalinfo SF1938_compressed.tif
+```
 
 [Understanding Compression of Geospatial Raster Imagery](https://files.nc.gov/ncdit/documents/files/TAC-compression.pdf)
 
