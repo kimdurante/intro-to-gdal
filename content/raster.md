@@ -205,6 +205,8 @@ Use the creation options flag ```-co``` along with ```COMPRESS=JPEG``` output a 
 $ gdal_translate -co COMPRESS=JPEG SF1993.tif SF1993_compressed.tif
 ```
 
+[Understanding Compression of Geospatial Raster Imagery](https://files.nc.gov/ncdit/documents/files/TAC-compression.pdf)
+
 Rescaling data
 
 ```
