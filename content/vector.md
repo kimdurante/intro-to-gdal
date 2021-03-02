@@ -25,15 +25,13 @@ See a list of available formats
 
 
 ## Exploring Data (ogrinfo)
-<br/>
 
 Use `ogrinfo` to list information about vector data
 
 ### Shapefiles
-<br/>
+
+
 Let's explore this polygon shapefile of Zip Codes in San Francisco
-
-
 
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/sfzipcodes.png" width="500">
 
@@ -108,7 +106,6 @@ ZIP_CODE: Integer64 (11.0)
 ID: Integer64 (11.0) 
 ```
 ### GeoJSON
-<br/>
 
 Let's explore this GeoJSON file of highways in the San Francisco Bay Area
 
@@ -158,7 +155,6 @@ bbox: RealList (0.0)
 ```
 
 ### Geodatabases
-<br/>
 
 Running `ogrinfo` on a geodatabase outputs a list of feature layers
 
