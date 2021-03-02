@@ -34,7 +34,7 @@ $ gdaltindex doqqs/doqqs_index.shp doqqs/*.tif
 
 ## Creating a Mosaic
 
-Mosaicing raster tiles (DOQQs) and creating an overview image using a VRT (Virtual Dataset) file. VRT are XML documents containing properties such as pixel dimensions and geometries which allow you to merge (mosaic) several raster files
+Mosaicing raster tiles (DOQQs) and creating an overview image using a VRT (Virtual Dataset) file. VRTs are XML documents containing properties such as pixel dimensions and geometries which allow you to merge (mosaic) several raster files
 
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/mosaic.png" width="500">
 
