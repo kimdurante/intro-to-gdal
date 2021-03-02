@@ -269,7 +269,7 @@ Converting a GeoTIFF to a PNG:
 $ gdal_translate -of png SF1987.tif SF1987_converted.png
 ```
 
-The San Francisco 1938 photo (_SF1938.tif_) is 464 MB. Let's compress the image using the creation option flags ```-co``` with `COMPRESS=JPEG`, `TILED=YES`` and PHOTOMETRIC=YCBCR` to create a compressed, tiled, YCBCR photometric GeoTIFF. YCBCR photometric interpretation will allow for a significant reduction in output size with minimal changes on the color/images. TILED=YES forces creation of tiled files.
+The San Francisco 1938 photo (_SF1938.tif_) is 464 MB. Let's compress the image using the creation option flags ```-co``` with `COMPRESS=JPEG`, `TILED=YES` and `PHOTOMETRIC=YCBCR` to create a compressed, tiled, YCBCR photometric GeoTIFF. YCBCR photometric interpretation will allow for a significant reduction in output size with minimal changes on the color/images. TILED=YES forces creation of tiled files.
 
 ```
 $ gdal_translate -co COMPRESS=JPEG -co TILED=YES -co PHOTOMETRIC=YCBCR SF1938.tif SF1938_compressed.tif
