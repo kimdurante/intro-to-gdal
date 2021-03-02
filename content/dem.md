@@ -44,3 +44,6 @@ $ gdal_contour -a elev -i 100 gt30w140n40_clipped.dem contours_100m.shp
 
 
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/contours_100m.png" width="500">
+
+
+[Working with Terrain Data](https://tilemill-project.github.io/tilemill/docs/guides/terrain-data/)
