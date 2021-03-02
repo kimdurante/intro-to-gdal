@@ -13,7 +13,7 @@ Clipping is a method of subsetting data. The clipping parameters can be specifie
 
 Use `gdal_translate` with the `-projwin` flag to specify the coordinates of a clipping extent (ulx uly lrx lry). 
 
-Let's clip _gt30w140n40.dem_ to bounding box (-121.852 39.593 -119.119 37.675)
+Let's clip the DEM (_gt30w140n40.dem_) to a bounding box (-121.852 39.593 -119.119 37.675)
 ```
 $ gdal_translate -projwin -121.852 39.593 -119.119 37.675 gt30w140n40_dem/gt30w140n40.dem gt30w140n40_clipped.dem
 ```
@@ -22,12 +22,12 @@ $ gdal_translate -projwin -121.852 39.593 -119.119 37.675 gt30w140n40_dem/gt30w1
 
 ### Clipping by Polygon Boundary
 
-Use `gdalwarp` with the `-cutline` flag to specify the clipping area 
+Use `gdalwarp` with the `-cutline` flag to specify a clipping boundary
 
-Clip the San Francisco quadrangle to the boundary of zip code 94109. Use the `-crop_to_cutline` flag to crop the extent of the new data to the extent of the cutline
+Clip the 1987 San Francisco photo to the boundary of zip code 94109. Use the `-crop_to_cutline` flag to crop the extent of the new data to the cutline extent
 
 ```
-$ gdalwarp -cutline sf_94109.geojson `-crop_to_cutline SF1987_wgs84.tif SF1987_wgs84_clipped.tif
+$ gdalwarp -cutline sf_94109.geojson -crop_to_cutline SF1987_wgs84.tif SF1987_wgs84_clipped.tif
 ```
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/clip_1987.png" width="500">
 
