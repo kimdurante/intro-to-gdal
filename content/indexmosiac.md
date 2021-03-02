@@ -49,7 +49,7 @@ $ gdalbuildvrt -input_file_list doqqs/doqqs.txt doqqs/doqqs_merged.vrt
 
 Use `gdalwarp` to reproject, set a nodata value, apply JPEG compression and output a GeoTIFF
 ```
-$ gdalwarp -t_srs EPSG:4326 -dstnodata 0 -co COMPRESS=JPEG  -of gtiff DOQQ/doqqs_merged.vrt DOQQ/doqqs_merged.tif
+$ gdalwarp -t_srs EPSG:4326 -dstnodata 0 -co COMPRESS=JPEG  -co TILED=YES -co PHOTOMETRIC=YCBCR -of gtiff doqqs/doqqs_merged.vrt doqqs/doqqs_merged.tif
 ```
 
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/mosaiced.png" width="500">
