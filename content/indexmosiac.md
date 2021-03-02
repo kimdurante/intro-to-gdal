@@ -4,6 +4,12 @@ title: Indexing and Mosaicing
 nav_order: 6
 ---
 
+## Indexing and Mosaicing
+
+* [Indexing Raster Tiles](#indexing-raster-tiles)
+* [Creating a Mosaic](#creating-a-mosaic)
+
+
 ## Indexing Raster Tiles
 <br/>
 The `gdaltindex` utility creates a polygon boundary containing features for each input file and a polygon geometry outlining the extent.
