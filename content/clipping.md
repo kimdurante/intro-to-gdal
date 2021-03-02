@@ -31,7 +31,7 @@ ogr2ogr -clipsrc sf_94103.shp sf94103_muni_stops.shp sf_muni_stops.shp
 
 ### Clipping Raster Data by Polygon Boundary
 
-Use `gdalwarp` with the `-cutline` flag to specify a clipping boundary
+Use `gdalwarp` with the `-cutline` flag to specify the clipping extent
 
 Clip the 1987 San Francisco photo to the boundary of zip code 94109. Use the `-crop_to_cutline` flag to crop the extent of the new data to the cutline extent
 
