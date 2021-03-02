@@ -5,7 +5,8 @@ nav_order: 6
 ---
 
 ## Clipping Data
-<br/>
+
+
 Clipping is a method of subsetting data. The clipping parameters can be specified as either a bounding box or another data layer.
 
 
