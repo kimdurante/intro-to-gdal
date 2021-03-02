@@ -35,7 +35,8 @@ OGRFeature(bus_stops_wgs84):0
 ```
 A: 79810
 
-___
+---
+
 
 Q: How many unique stops are contained in this layer?
 
@@ -56,7 +57,8 @@ OGRFeature(bus_stops_wgs84):0
 
 A: 23954
 
-___
+---
+
 
 Q: How many stops are serviced by San Francisco MUNI?
 
@@ -73,7 +75,7 @@ OGRFeature(bus_stops_wgs84):0
 
 A: 13880
 
-___
+---
 
 ### Saving Query Results
 
@@ -86,7 +88,7 @@ $ ogr2ogr sf_muni_stops.shp bus_stops_wgs84.shp -sql "SELECT * FROM bus_stops_wg
 ```
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/sfmuni.png" width="500">
 
-___
+---
 
 Find the boundary of zipcode 94109 and save it to GeoJSON
 
