@@ -89,10 +89,15 @@ $ ogr2ogr sf_muni_stops.shp bus_stops_wgs84.shp -sql "SELECT * FROM bus_stops_wg
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/sfmuni.png" width="500">
 
 ---
+Clip the 94103 boundary and save it to a shapefile
+
+```
+ogr2ogr sf_94103.shp sfzipcodes.shp -t_srs EPSG:4326 -sql "SELECT * FROM sfzipcodes WHERE ZIP_CODE ='94103'"
+```
 
 Clip the 94109 zipcode boundary and save it to GeoJSON
 
 ```
-$ ogr2ogr sf_94109.geojson sfzipcodes.shp -sql "SELECT * FROM sfzipcodes WHERE ZIP_CODE ='94109'"
+$ ogr2ogr sf_94109.geojson -t_srs EPSG:4326 sfzipcodes.shp -sql "SELECT * FROM sfzipcodes WHERE ZIP_CODE ='94109'"
 ```
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/94109.png" width="500">
