@@ -145,7 +145,7 @@ Run `gdalinfo` on the 1938 Composite image of San Francisco. Notice that each ba
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/SF1938_map.png" width="500">
 
 ```
-gdalinfo SF1938.tif
+$ gdalinfo SF1938.tif
 ```
 
 ```
@@ -193,7 +193,7 @@ Let's explore the 1915 Map of San Francisco
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/SF1915.png" width="500">
 
 ```
-gdalinfo SF1915.tif
+$ gdalinfo SF1915.tif
 ```
 
 Notice that there are 4 bands in this image (red, green, blue, alpha), as well as a NoData value of 0
