@@ -60,8 +60,8 @@ Summary of files included with this download
   - SF1987.tif - aerial photgraph of northeast quandrangle of San Francisco (1987)
   - houston.tif - urban footprint of Houston, TX
   - los_angeles.tif - urban footprint of Los Angeles, CA
-  - gt30w140n40_dem/gt30w140n40.dem - Global 30 Arc-Second Elevation (GTOPO30) / digital elevation model 
-  - doqqs/* - Digital Orthophoto Quadrangles / 9 tiles from a section of Louisiana
+  - gt30w140n40_dem/gt30w140n40.dem - Global 30 Arc-Second Elevation (GTOPO30) - digital elevation model 
+  - doqqs/* - Digital Orthophoto Quadrangles - 9 tiles from a section of Louisiana
 
 * Vector Data
   - Bus_Stops.shp - San Francisco Bay Area bus stops
