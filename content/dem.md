@@ -39,7 +39,7 @@ $ gdaldem color-relief gt30w140n40_clipped.dem colorramp.txt color_relief.tif
 Build vector contour lines from a raster elevation model. Use the `-a` flag to set the elecation attribute and `-i` flag to specify elevation intervals. 
 
 ```
-$ gdal_contour -a elev -i 20 gt30w140n40_clipped.dem contours.shp
+$ gdal_contour -a elev -i 100 gt30w140n40_clipped.dem contours_100m.shp
 ```
 
 
