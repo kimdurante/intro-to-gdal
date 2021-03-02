@@ -6,6 +6,10 @@ nav_order: 7
 
 ## Digital Elevation Models
 
+* [Hillshade](#hillshade)
+* [Color Relief](#color-relief)
+* [Contour Lines](#contour-lines)
+
 The `gdaldem` utility can be used to analyze and visualize DEMs. 
 
 Let's analyze our clipped DEM 
