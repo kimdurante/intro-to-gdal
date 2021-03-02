@@ -140,10 +140,75 @@ Band 2 Block=6244x1 Type=Byte, ColorInterp=Green
 Band 3 Block=6244x1 Type=Byte, ColorInterp=Blue
 ```
 
+Run `ogrinfo` on the 1938 Composite image of San Francisco. Notice that each band (RGB) has a NoData Value of 0. 
+
+```
+gdalinfo SF1938.tif
+```
+
+```
+Band 1 Block=37509x16 Type=Byte, ColorInterp=Red
+  Min=1.000 Max=255.000 
+  Minimum=1.000, Maximum=255.000, Mean=98.291, StdDev=51.897
+  NoData Value=0
+  Metadata:
+    STATISTICS_COVARIANCES=2693.285955948338,2651.095395949078,2569.287814804031
+    STATISTICS_MAXIMUM=255
+    STATISTICS_MEAN=98.290836665212
+    STATISTICS_MINIMUM=1
+    STATISTICS_SKIPFACTORX=1
+    STATISTICS_SKIPFACTORY=1
+    STATISTICS_STDDEV=51.896878094432
+Band 2 Block=37509x16 Type=Byte, ColorInterp=Green
+  Min=1.000 Max=255.000 
+  Minimum=1.000, Maximum=255.000, Mean=95.146, StdDev=51.271
+  NoData Value=0
+  Metadata:
+    STATISTICS_COVARIANCES=2651.095395949078,2628.756783663635,2542.154359436107
+    STATISTICS_MAXIMUM=255
+    STATISTICS_MEAN=95.146410610285
+    STATISTICS_MINIMUM=1
+    STATISTICS_SKIPFACTORX=1
+    STATISTICS_SKIPFACTORY=1
+    STATISTICS_STDDEV=51.27140317627
+Band 3 Block=37509x16 Type=Byte, ColorInterp=Blue
+  Min=1.000 Max=255.000 
+  Minimum=1.000, Maximum=255.000, Mean=91.934, StdDev=49.754
+  NoData Value=0
+  Metadata:
+    STATISTICS_COVARIANCES=2569.287814804031,2542.154359436107,2475.508464661893
+    STATISTICS_MAXIMUM=255
+    STATISTICS_MEAN=91.933985832391
+    STATISTICS_MINIMUM=1
+    STATISTICS_SKIPFACTORX=1
+    STATISTICS_SKIPFACTORY=1
+    STATISTICS_STDDEV=49.754481855024
+
+```
+
+Let's explore the 1915 Map of San Francisco
+
+```
+gdalinfo SF1915.tif
+```
+
+Notice that there are 4 bands in this image (red, green, blue, alpha), as well as a NoData value of 0
+
+```
+Band 1 Block=4096x8 Type=Byte, ColorInterp=Red
+  NoData Value=0
+Band 2 Block=4096x8 Type=Byte, ColorInterp=Green
+  NoData Value=0
+Band 3 Block=4096x8 Type=Byte, ColorInterp=Blue
+  NoData Value=0
+Band 4 Block=4096x8 Type=Byte, ColorInterp=Alpha
+  NoData Value=0
+```
+
 Use the ```-nomd``` flag to supress output of metadata
 
 ```
-$ gdalinfo -nomd SF1987.tif
+$ gdalinfo -nomd SF1915.tif
 ```
 
 ### Digital Elevation Models
