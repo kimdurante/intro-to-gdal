@@ -61,7 +61,7 @@ Summary of files included with this download
   - houston.tif - urban footprint of Houston, TX
   - los_angeles.tif - urban footprint of Los Angeles, CA
   - gt30w140n40_dem/gt30w140n40.dem - Global 30 Arc-Second Elevation (GTOPO30) / digital elevation model 
-  - doqq/* - Digital Orthophoto Quadrangles / 9 tiles from a section of Louisiana
+  - doqqs/* - Digital Orthophoto Quadrangles / 9 tiles from a section of Louisiana
 
 * Vector Data
   - Bus_Stops.shp - San Francisco Bay Area bus stops
