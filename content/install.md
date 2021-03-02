@@ -17,40 +17,31 @@ Download the zip file of workshop data
 
 Summary of files included with this download
 
-* GeoTIFFs
+* Raster Data
   - SF1915.tif
   - SF1938.tif
   - SF1987.tif
   - houston.tif
   - los_angeles.tif
+  - gt30w140n40_dem
+  - doqq/*
 
-* Digital Elevation Model
-  gt30w140n40_dem
-
-* Shapefiles
-  Bus_Stops.shp
-  Civic_Art.shp
-  sfzipcodes.shp
-
-* GeoJSON
-  sfbayhighways.geojson
-
- * Geodatabase
- SanFranciscoESI.gdb
-
- * DOQQ
- Digital Orthophoto Quarter Quads (DOQQ)
+* Vector Data
+  - Bus_Stops.shp
+  - Civic_Art.shp
+  - sfzipcodes.shp
+  - sfbayhighways.geojson
+  - SanFranciscoESI.gdb
  
- * Python Scripts
-- clipTiffs.py
-- projectShapes.py
-- projectTiffs.py
-- shp2geojson.py
+* Scripts
+ - clipTiffs.py
+ - projectShapes.py
+ - projectTiffs.py
+ - shp2geojson.py
 
-Color Configuration File
-- colorramp.txt
+* Text
+ - colorramp.txt
 
-</details>
 
 ## Installing GDAL
 
