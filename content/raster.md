@@ -143,6 +143,7 @@ Band 3 Block=6244x1 Type=Byte, ColorInterp=Blue
 Run `gdalinfo` on the 1938 Composite image of San Francisco. Notice that each band (RGB) has a NoData Value of 0. 
 
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/SF1938_map.png" width="500">
+
 ```
 gdalinfo SF1938.tif
 ```
