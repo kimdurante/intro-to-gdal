@@ -50,7 +50,7 @@ $ gdalinfo --version
 
 Download the zip file of workshop data
 
-[Download Data](../data/us-national-parks.geojson){: .btn .btn-blue }
+[Download Data](https://drive.google.com/file/d/0B0WoZmauQebXWXlJVllKNEZWd1U/view?usp=sharing){: .btn .btn-blue }
 
 Summary of files included with this download
 
