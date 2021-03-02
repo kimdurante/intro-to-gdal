@@ -32,14 +32,15 @@ Summary of files included with this download
   - sfzipcodes.shp
   - sfbayhighways.geojson
   - SanFranciscoESI.gdb
- 
+
 * Scripts
- - clipTiffs.py
- - projectShapes.py
- - projectTiffs.py
- - shp2geojson.py
+  - clipTiffs.py
+  - projectShapes.py
+  - projectTiffs.py
+  - shp2geojson.py
 
-
+* Text
+  - colorramp.txt
 ## Installing GDAL
 
 ### On a Mac
