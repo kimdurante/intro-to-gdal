@@ -27,7 +27,7 @@ $ gdaltindex -t_srs EPSG:4326 maps_index.shp houston.tif los_angeles.tif
 From all rasters in a directory
 
 ```
-$ gdaltindex doqqs/doqqs_index.shp doqqs/*.tif 
+$ gdaltindex doqq/doqq_index.shp doqq/*.tif 
 ```
 
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/index.png" width="500">
@@ -38,13 +38,13 @@ Mosaicing raster tiles (DOQQs) and creating an overview image using a VRT (Virtu
 
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/mosaic.png" width="500">
 
-Create an input list of files from the _doqqs_ directory
+Create an input list of files from the _doqq_ directory
 ```
-$ for file in doqqs/*/*.tif*; do echo "$file" >> doqqs/doqqs.txt; done
+$ for file in doqq/*/*.tif*; do echo "$file" >> doqq/doqq.txt; done
 ```
 Use the `gdalbuildvrt` utility with `-input_file_list` 
 ```
-$ gdalbuildvrt -input_file_list doqqs/doqqs.txt doqqs/doqqs_merged.vrt 
+$ gdalbuildvrt -input_file_list doqq/doqq.txt doqq/doqq_merged.vrt 
 ```
 
 Use `gdalwarp` to reproject to WGS84, set a nodata value, apply JPEG compression, tiling, and YCBCR photometric and output a GeoTIFF
@@ -59,5 +59,5 @@ $ gdalwarp -t_srs EPSG:4326 -dstnodata 0 -co COMPRESS=JPEG  -co TILED=YES -co PH
 Run the command above again. You will get an error message saying that the file already exists. Use the `-overwrite` flag to overwrite the existing file
 
 ```
-$ gdalwarp -t_srs EPSG:4326 -dstnodata 0 -co COMPRESS=JPEG  -co TILED=YES -co PHOTOMETRIC=YCBCR -of gtiff -overwrite doqqs/doqqs_merged.vrt doqqs/doqqs_merged.tif
+$ gdalwarp -t_srs EPSG:4326 -dstnodata 0 -co COMPRESS=JPEG  -co TILED=YES -co PHOTOMETRIC=YCBCR -of gtiff -overwrite doqqs/doqqs_merged.vrt doqq/doqq_merged.tif
 ```
