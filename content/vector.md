@@ -33,6 +33,8 @@ Use `ogrinfo` to list information about vector data
 <br/>
 Let's explore this polygon shapefile of Zip Codes in San Francisco
 
+
+
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/sfzipcodes.png" width="500">
 
 ```
