@@ -7,7 +7,6 @@ nav_order: 1
 ## Getting Started
 
 * [Installing GDAL](#installing-gdal)
-
 * [Workshop Data](#workshop-data)
 
 ## Installing GDAL
