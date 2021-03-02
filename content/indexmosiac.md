@@ -8,7 +8,7 @@ nav_order: 6
 <br/>
 The `gdaltindex` utility creates a polygon boundary containing features for each input file and a polygon geometry outlining the extent.
 
-To create an index from one raster file
+Creating an index from one raster file
 
 ```
 $ gdaltindex SF1938_index.geojson SF1938.tif
@@ -16,7 +16,7 @@ $ gdaltindex SF1938_index.geojson SF1938.tif
 
 ![Index of one raster file](https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/single_index.png)
 
-To index multiple rasters by filename
+From two files
 
 ```
 $ gdaltindex -t_srs EPSG:4326 maps_index.shp houston.tif los_angeles.tif
@@ -24,27 +24,27 @@ $ gdaltindex -t_srs EPSG:4326 maps_index.shp houston.tif los_angeles.tif
 
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/index_2.png" width="500">
 
-To index multiple rasters in a directory
+From all rasters in a directory
 
 ```
-$ gdaltindex doqq/doqq_index.shp doqq/*.tif 
+$ gdaltindex doqqs/doqqs_index.shp doqqs/*.tif 
 ```
 
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/index.png" width="500">
 
 ## Creating a Mosaic
 
-Mosaicing raster tiles of all the files and then an overview image
+Mosaicing raster tiles (DOQQs) and creating an overview image using a VRT (Virtual Dataset) file. VRT are XML documents containing properties such as pixel dimensions and geometries which allow you to merge (mosaic) several raster files
 
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/mosaic.png" width="500">
 
-Create an input list of DOQQs
+Create an input list of files from the _doqqs_ directory
 ```
-$ for file in DOQQ/*/*.tif*; do echo "$file" >> DOQQ/doqqs.txt; done
+$ for file in doqqs/*/*.tif*; do echo "$file" >> doqqs/doqqs.txt; done
 ```
-VRT (Virtual Dataset) is an XML file, similar to a tile index, that references all the files holding the extent, projection, etc without any processing or translation of the files.
+Use the `gdalbuildvrt` utility with `-input_file_list` 
 ```
-$ gdalbuildvrt -input_file_list DOQQ/doqqs.txt DOQQ/doqqs_merged.vrt 
+$ gdalbuildvrt -input_file_list doqqs/doqqs.txt doqqs/doqqs_merged.vrt 
 ```
 
 Use `gdalwarp` to reproject, set a nodata value, apply JPEG compression and output a GeoTIFF
