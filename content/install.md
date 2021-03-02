@@ -15,15 +15,14 @@ Download the zip file of workshop data
 
 [Download Data](../data/us-national-parks.geojson){: .btn .btn-blue }
 
-<details>
-<summary>Summary of files included in the workshop data</summary>
-<br>
+Summary of files included with this download
 
 * GeoTIFFs
-  SF1987.tif
-  SF1938.tif
-  houston.tif
-  los_angeles.tif
+  - SF1915.tif
+  - SF1938.tif
+  - SF1987.tif
+  - houston.tif
+  - los_angeles.tif
 
 * Digital Elevation Model
   gt30w140n40_dem
