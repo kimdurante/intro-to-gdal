@@ -12,7 +12,7 @@ Clipping is a method of subsetting data. The clipping parameters can be specifie
 
 * [Clipping by Bounding Box](#clipping-by-bounding-box)
 * [Clipping Vector Data by Polygon](#clipping-vector-data-by-polygon-boundary)
-* [Clipping Raster Data by Polygon Boundary](#clipping-raster-data-by-polygon-boundary)
+* [Clipping Raster Data by Polygon](#clipping-raster-data-by-polygon-boundary)
 * [Batch Processing](#batch-processing)
 
 
