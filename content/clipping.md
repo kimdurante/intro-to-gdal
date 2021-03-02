@@ -19,8 +19,15 @@ $ gdal_translate -projwin -121.852 39.593 -119.119 37.675 gt30w140n40_dem/gt30w1
 ```
 <img src="https://raw.githubusercontent.com/kimdurante/intro-to-gdal/master/images/dem_clip.png" width="500">
 
+### Clipping Vector Data by Polygon Boundary 
 
-### Clipping by Polygon Boundary
+Let's clip the SF MUNI stops shapefile to contain only stops in the 94103 zip code
+
+```
+ogr2ogr -clipsrc sf_94103.shp  sf94103_muni_stops.shp sf_muni_stops.shp
+```
+
+### Clipping a Raster Data by Polygon Boundary
 
 Use `gdalwarp` with the `-cutline` flag to specify a clipping boundary
 
