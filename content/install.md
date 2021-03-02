@@ -77,4 +77,4 @@ Summary of files included with this download
   - shp2geojson.py - convert shapefiles to GeoJSON
 
 * Text
-  - colorramp.txt
+  - colorramp.txt - color configuration file for relief mapping
