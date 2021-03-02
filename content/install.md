@@ -55,26 +55,26 @@ Download the zip file of workshop data
 Summary of files included with this download
 
 * Raster Data
-  - SF1915.tif
-  - SF1938.tif
-  - SF1987.tif
-  - houston.tif
-  - los_angeles.tif
-  - gt30w140n40_dem
-  - doqq/*
+  - SF1915.tif - georeferenced map of San Francisco (1915)
+  - SF1938.tif - composite image of a set of 164 large format black and white vertical aerial photographs of San Francisco (1938)
+  - SF1987.tif - aerial photgraph of Northeast Quandrangle of San Francisco (1987)
+  - houston.tif - urban footprint of Houston, TX
+  - los_angeles.tif - urban footprint of Loas Angeles, CA
+  - gt30w140n40_dem/gt30w140n40.dem - Global 30 Arc-Second Elevation (GTOPO30) / digital elevation model 
+  - doqq/* - Digital Orthophoto Quadrangles / 9 tiles from a section of Louisiana
 
 * Vector Data
-  - Bus_Stops.shp
-  - Civic_Art.shp
-  - sfzipcodes.shp
-  - sfbayhighways.geojson
-  - SanFranciscoESI.gdb
+  - Bus_Stops.shp - San Francisco Bay Area bus stops
+  - Civic_Art.shp - - locations of artwork around San Francisco
+  - sfzipcodes.shp - Zip Code boundaries in San Francisco
+  - sfbayhighways.geojson - San Francisco Bay Area highways
+  - SanFranciscoESI.gdb - Geodatabase created by the San Francisco Estuary Institute 
 
 * Scripts
-  - clipTiffs.py
-  - projectShapes.py
-  - projectTiffs.py
-  - shp2geojson.py
+  - clipTiffs.py - clip GeoTIFFs to polygon boundary
+  - projectShapes.py - reproject shapefiles to WGS84
+  - projectTiffs.py - reproject GeoTIFFs to WGS84
+  - shp2geojson.py - convert shapefiles to GeoJSON
 
 * Text
   - colorramp.txt
