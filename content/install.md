@@ -39,9 +39,6 @@ Summary of files included with this download
  - projectTiffs.py
  - shp2geojson.py
 
-* Text
- - colorramp.txt
-
 
 ## Installing GDAL
 
