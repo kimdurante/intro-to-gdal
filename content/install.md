@@ -52,6 +52,8 @@ Download the zip file of workshop data
 
 [Download Data](https://drive.google.com/file/d/0B0WoZmauQebXWXlJVllKNEZWd1U/view?usp=sharing)
 
+Unzip the folder to your machine. Open a terminal and navigate into the 'data' directory
+
 Summary of files included with this download
 
 * Raster Data
