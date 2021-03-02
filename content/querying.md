@@ -90,7 +90,7 @@ $ ogr2ogr sf_muni_stops.shp bus_stops_wgs84.shp -sql "SELECT * FROM bus_stops_wg
 
 ---
 
-Find the boundary of zipcode 94109 and save it to GeoJSON
+Clip the 94109 zipcode boundary and save it to GeoJSON
 
 ```
 $ ogr2ogr sf_94109.geojson sfzipcodes.shp -sql "SELECT * FROM sfzipcodes WHERE ZIP_CODE ='94109'"
