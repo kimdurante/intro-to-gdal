@@ -50,7 +50,7 @@ $ gdalinfo --version
 
 Download the zip file of workshop data
 
-[Download Data](https://drive.google.com/file/d/0B0WoZmauQebXWXlJVllKNEZWd1U/view?usp=sharing)
+[Download Data](https://drive.google.com/file/d/1R7IymHj5XLfTy61WvEvkEpgNjCBxGAIv/view?usp=sharing)
 
 Unzip the folder to your machine. Open a terminal and navigate into the 'data' directory
 
