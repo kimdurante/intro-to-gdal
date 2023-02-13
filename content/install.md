@@ -9,43 +9,60 @@ nav_order: 1
 * [Installing GDAL](#installing-gdal)
 * [Workshop Data](#workshop-data)
 
-## Installing GDAL
 
-### On a Mac
+## Installation
 
-Download the GDAL Complete framework appropriate for your operating system here
+### Conda
 
-[http://www.kyngchaos.com/software/frameworks](http://www.kyngchaos.com/software/frameworks)
+GDAL can be quite complex to build and install, particularly on Windows and MacOS. Pre built binaries are provided for the conda system:
 
-After the installation is complete, open your terminal and run the following command
+https://docs.conda.io/en/latest/
 
- ```
- $ export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH
- ```
+By the conda-forge project:
 
-Verify that GDAL is installed properly by opening a terminal and running the following command
+https://conda-forge.org/
 
+Once you have Anaconda or Miniconda installed, you should be able to install GDAL with:
+
+```$ conda install -c conda-forge gdal```
+
+### Unix
+
+The GDAL Python bindings requires setuptools.
+
+### pip
+
+GDAL can be installed from the Python Package Index:
+
+```$ pip install GDAL```
+
+It will be necessary to have libgdal and its development headers installed if pip is expected to do a source build because no wheel is available for your specified platform and Python version.
+
+To install the version of the Python bindings matching your native GDAL library:
+
+### Windows
+
+You will need the following items to complete an install of the GDAL Python bindings on Windows:
+
+    GDAL Windows Binaries Download the package that best matches your environment.
+
+As explained in the README_EXE.txt file, after unzipping the GDAL binaries you will need to modify your system path and variables. If you’re not sure how to do this, read the Microsoft Knowledge Base doc
+
+1. Add the installation directory bin folder to your system PATH, remember to put a semicolon in front of it before you add to the existing path.
+    
+    ```C:\gdalwin32-1.7\bin```
+    
+2. Create a new user or system variable with the data folder from your installation.
+
+    ```Name : GDAL_DATA```
+    ```Path : C:\gdalwin32-1.7\data```
+    
+ Verify that the installation was successful by opening a terminal and running the following command:
+ 
 ```
 $ gdalinfo --version
 ```
-
-### On Windows
-
-
-
-Use the OSGEO4W Installer to download & install GDAL
-
-[https://trac.osgeo.org/osgeo4w](https://trac.osgeo.org/osgeo4w)
-
-You will use the OSGeo4W Shell to access GDAL. This shell is automatically installed when following the instructions above. 
-
-Verify that the installation was successful by opening the OSGeo4W Shell and running the following command
-
-```
-$ gdalinfo --version
-```
-
-
+    
 ## Workshop Data
 
 Download the zip file of workshop data
