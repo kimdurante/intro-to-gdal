@@ -55,6 +55,7 @@ As explained in the README_EXE.txt file, after unzipping the GDAL binaries you w
 2. Create a new user or system variable with the data folder from your installation.
 
     ```Name : GDAL_DATA```
+    
     ```Path : C:\gdalwin32-1.7\data```
     
  Verify that the installation was successful by opening a terminal and running the following command:
