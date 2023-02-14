@@ -26,9 +26,6 @@ Once you have Anaconda or Miniconda installed, you should be able to install GDA
 
 ```$ conda install -c conda-forge gdal```
 
-### Unix
-
-The GDAL Python bindings requires setuptools.
 
 ### pip
 
@@ -44,7 +41,7 @@ To install the version of the Python bindings matching your native GDAL library:
 
 You will need the following items to complete an install of the GDAL Python bindings on Windows:
 
-    GDAL Windows Binaries Download the package that best matches your environment.
+[GDAL Windows Binaries](https://www.gisinternals.com) Download the package that best matches your environment.
 
 As explained in the README_EXE.txt file, after unzipping the GDAL binaries you will need to modify your system path and variables. If you’re not sure how to do this, read the Microsoft Knowledge Base doc
 
